@@ -3,86 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Sravani |Business Analyst</title>
+    <title>Sai Sravani | Business Analyst</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        :root { 
-            --asu-maroon: #8C1D40; 
-            --asu-gold: #FFC627; 
-            --slate: #2d3436; 
-            --glass: rgba(255, 255, 255, 0.94); 
-        }
+        :root { --asu-maroon: #8C1D40; --asu-gold: #FFC627; --slate: #2d3436; --glass: rgba(255, 255, 255, 0.96); }
         
         body { 
-            font-family: 'Inter', sans-serif; 
-            color: var(--slate); 
-            line-height: 1.6; 
-            margin: 0;
-            /* Faded Data Graph Background */
+            font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; margin: 0;
+            /* Faded Dashboard/Graph Background */
             background-color: #f8f9fa;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238c1d40' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238c1d40' fill-opacity='0.03'%3E%3Crect x='10' y='150' width='10' height='40'/%3E%3Crect x='25' y='130' width='10' height='60'/%3E%3Crect x='40' y='110' width='10' height='80'/%3E%3Ccircle cx='120' cy='50' r='30' fill='none' stroke='%238c1d40' stroke-width='1'/%3E%3Cpath d='M100 150 Q 130 100 180 140' stroke='%238c1d40' stroke-width='1' fill='none'/%3E%3C/g%3E%3C/svg%3E");
             background-attachment: fixed;
         }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; position: relative; z-index: 1; }
-        
-        .hero { display: flex; flex-direction: column; justify-content: center; border-bottom: 4px solid var(--asu-gold); padding-bottom: 20px; margin-bottom: 30px; }
+        nav { background: var(--asu-maroon); padding: 15px 0; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 30px; }
+        nav a { color: var(--asu-gold); text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+        .hero { border-bottom: 4px solid var(--asu-gold); padding-bottom: 20px; margin-bottom: 30px; }
         .name-header { font-size: 5rem; font-weight: 900; margin: 0; color: #000000; letter-spacing: -3px; line-height: 0.85; }
-        .title-sub { font-size: 1.6rem; color: var(--asu-maroon); margin: 10px 0 5px 0; font-weight: 700; text-transform: uppercase; }
-        .asu-meta { font-size: 1.1rem; color: #576574; font-weight: 500; margin: 0; }
+        .title-sub { font-size: 1.6rem; color: var(--asu-maroon); margin: 10px 0 5px 0; font-weight: 700; }
 
-        .about-box { background: var(--glass); padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 8px solid var(--asu-maroon); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .section-title { border-bottom: 3px solid var(--asu-maroon); display: inline-block; margin-top: 30px; margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; letter-spacing: 2px; font-weight: 800; color: var(--asu-maroon); }
-
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
-        .skill-bucket { background: var(--glass); padding: 20px; border-radius: 10px; border-top: 4px solid var(--asu-gold); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .skill-tag { display: inline-block; background: #f8f9fa; color: var(--asu-maroon); border: 1px solid #eee; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; margin: 2px; font-weight: 600; }
-
-        .project-block { background: var(--glass); padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        .contact-section { text-align: center; margin-top: 50px; padding: 40px; background: var(--asu-maroon); border-radius: 15px; color: white; }
-        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .project-block { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .project-meta { color: var(--asu-maroon); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; }
         
-        .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; border: none; font-size: 1rem; }
-        .btn-outline { background: transparent; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; border: 2px solid var(--asu-gold); font-size: 1rem; }
+        /* Publication Link Style */
+        .pub-link { display: inline-block; margin-top: 15px; color: var(--asu-maroon); font-weight: 700; text-decoration: none; border: 1px solid var(--asu-maroon); padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
+        .pub-link:hover { background: var(--asu-maroon); color: white; }
+
+        .dashboard-img { width: 100%; border-radius: 8px; margin-top: 15px; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#dashboards">Visuals</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <div class="container">
-    <div class="hero" data-aos="fade-down">
+    <header class="hero" id="about" data-aos="fade-down">
         <h1 class="name-header">Sai Sravani</h1>
         <div class="title-sub">Senior Business Analyst</div>
-        <p class="asu-meta">MS Business Analytics | Arizona State University</p>
-    </div>
+        <p>MS Business Analytics | Arizona State University</p>
+        <p>Expertise in <b>KPI governance</b> and <b>Process Optimization</b> with 3+ years of experience.</p>
+    </header>
 
-    <div class="about-box" data-aos="fade-up">
-        <p>Strategic Business Analytics professional with <b>3+ years of experience</b> supporting global initiatives at <b>Capgemini</b>. Expert in <b>KPI governance</b> and process optimization, reducing manual reporting efforts by <b>40%</b> through SQL and Power BI automation.</p>
-    </div>
-
-    <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
-    <div class="skills-grid">
-        <div class="skill-bucket" data-aos="zoom-in">
-            <h4 style="margin:0 0 10px 0; color:var(--asu-maroon); text-transform: uppercase; font-size: 0.8rem;">Analytics & Programming</h4>
-            <span class="skill-tag">SQL</span> <span class="skill-tag">Python</span> <span class="skill-tag">PostgreSQL</span> <span class="skill-tag">Predictive Modeling</span>
+    <div id="projects">
+        <h2 style="color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px;">Strategic Case Studies</h2>
+        
+        <div class="project-block" data-aos="fade-up">
+            <span class="project-meta">Statistical Risk Modeling | ASU</span>
+            <h3>Quantitative Risk Simulation</h3>
+            <p>Applied decision analysis using Precision Tree to quantify risk factors in a complex business case study.</p>
+            <a href="Risk_Modeling_Case_Study.pdf" target="_blank" class="pub-link">Read Full Case Study (PDF)</a>
         </div>
-        <div class="skill-bucket" data-aos="zoom-in" data-aos-delay="100">
-            <h4 style="margin:0 0 10px 0; color:var(--asu-maroon); text-transform: uppercase; font-size: 0.8rem;">Visualization & CRM</h4>
-            <span class="skill-tag">Power BI</span> <span class="skill-tag">Tableau</span> <span class="skill-tag">Salesforce Certified</span> <span class="skill-tag">Advanced Excel</span>
+
+        <div class="project-block" data-aos="fade-up">
+            <span class="project-meta">Inventory Management | Honor Health</span>
+            <h3>Supply Chain Optimization</h3>
+            <p>Analyzed replenishment strategies to optimize healthcare inventory levels and reduce stockouts.</p>
+            <a href="Honor_Health_Capstone.pdf" target="_blank" class="pub-link">View Capstone Publication &rarr;</a>
         </div>
     </div>
 
-    <h2 class="section-title" data-aos="fade-up">Professional Milestones</h2>
-    <div class="project-block" data-aos="fade-up">
-        <span style="color:var(--asu-maroon); font-weight:800; font-size:0.8rem; text-transform:uppercase;">Experience | Capgemini</span>
-        <h3 style="color:var(--asu-maroon); margin-top:0;">KPI Governance & Automation Lead</h3>
-        <p style="margin-bottom:0;">Executed analytics-driven processes and automated reporting cycles, delivering actionable insights for leadership.</p>
+    <div id="dashboards">
+        <h2 style="color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px;">Dashboards & Analytics</h2>
+        <div class="project-block" data-aos="zoom-in">
+            <span class="project-meta">Power BI | Tableau</span>
+            <p>Automated reporting ecosystems reducing manual effort by <b>40%</b>.</p>
+            <img src="dashboard_sample.png" alt="Analytics Dashboard Preview" class="dashboard-img">
+        </div>
     </div>
 
-    <div class="contact-section" data-aos="zoom-in">
-        <h2 style="margin-top:0; color:var(--asu-gold); font-size: 1.8rem;">Let's Connect</h2>
-        <div class="btn-group">
-            <a href="Resume_Sai_Sravani.pdf" download class="btn-main">Download Resume (PDF)</a>
-            <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-outline">LinkedIn Profile</a>
+    <div class="contact-section" id="contact" style="text-align: center; margin-top: 50px; padding: 40px; background: var(--asu-maroon); border-radius: 15px; color: white;">
+        <h2 style="color:var(--asu-gold)">Career Collaboration</h2>
+        <div style="margin-top: 20px;">
+            <a href="Resume_Sai_Sravani.pdf" download style="background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800;">Download Resume (PDF)</a>
         </div>
     </div>
 </div>
