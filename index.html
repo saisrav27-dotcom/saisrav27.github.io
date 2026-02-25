@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Sravani | Business Analyst</title>
+    <title>Sai Sravani | Senior Business Analyst</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         :root { --asu-maroon: #8C1D40; --asu-gold: #FFC627; --slate: #2d3436; --glass: rgba(255, 255, 255, 0.96); }
@@ -19,13 +19,14 @@
         nav a { color: var(--asu-gold); text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 
         .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
-        .hero { border-bottom: 4px solid var(--asu-gold); padding-bottom: 20px; margin-bottom: 30px; }
+        .hero { border-bottom: 4px solid var(--asu-gold); padding-bottom: 20px; margin-bottom: 25px; }
         .name-header { font-size: 5rem; font-weight: 900; margin: 0; color: #000000; letter-spacing: -3px; line-height: 0.85; }
         .title-sub { font-size: 1.6rem; color: var(--asu-maroon); margin: 10px 0 5px 0; font-weight: 700; }
 
+        .about-section { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid var(--asu-maroon); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
         .section-header { color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px; margin-top: 50px; border-left: 5px solid var(--asu-gold); padding-left: 15px; margin-bottom: 25px; }
         
-        /* New Coursework Grid */
         .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px; }
         .course-card { background: white; padding: 15px; border-radius: 8px; border-bottom: 3px solid var(--asu-maroon); text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--asu-maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
 
@@ -48,18 +49,28 @@
 
 <nav>
     <a href="#about">About</a>
-    <a href="#coursework">Coursework</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
 </nav>
 
 <div class="container">
-    <header class="hero" id="about" data-aos="fade-down">
+    <header class="hero" data-aos="fade-down">
         <h1 class="name-header">Sai Sravani</h1>
         <div class="title-sub">Senior Business Analyst</div>
         <p>MS Business Analytics | Arizona State University</p>
     </header>
+
+    <div id="about" class="about-section" data-aos="fade-up">
+        <h2 style="margin-top: 0; color: var(--asu-maroon); font-size: 1.2rem; text-transform: uppercase;">About Me</h2>
+        <p>
+            I am a results-driven <b>Senior Business Analyst</b> with over 3 years of experience in driving operational excellence through data-driven strategies. My background at <b>Capgemini</b> involved architecting KPI ecosystems and automating complex reporting workflows, successfully reducing manual effort by <b>40%</b>.
+        </p>
+        <p>
+            Currently, I am pursuing an <b>MS in Business Analytics</b> at Arizona State University to further my expertise in predictive modeling, AI programming, and advanced marketing analytics. I am passionate about transforming unstructured data into actionable insights and bridging the gap between technical complexity and business growth.
+        </p>
+    </div>
 
     <div id="coursework">
         <h2 class="section-header">Relevant Master's Coursework</h2>
@@ -76,25 +87,25 @@
         <h2 class="section-header">Technical Arsenal</h2>
         <div class="skills-container" data-aos="fade-up">
             <div class="skill-bucket">
-                <h4 style="margin:0 0 10px 0;">Analytics & Programming</h4>
+                <h4 style="margin:0 0 10px 0;">📊 Analytics & Programming</h4>
                 <ul class="skill-list">
                     <li>SQL, PostgreSQL, Python (Pandas, Scikit)</li>
                 </ul>
             </div>
             <div class="skill-bucket">
-                <h4 style="margin:0 0 10px 0;">Reporting & Visualization</h4>
+                <h4 style="margin:0 0 10px 0;">📈 Reporting & Visualization</h4>
                 <ul class="skill-list">
                     <li>Tableau, Power BI, Advanced Excel</li>
                 </ul>
             </div>
             <div class="skill-bucket">
-                <h4 style="margin:0 0 10px 0;">Data & Tools</h4>
+                <h4 style="margin:0 0 10px 0;">🛠️ Data & Tools</h4>
                 <ul class="skill-list">
                     <li>SQL Server, MySQL, Data Warehousing, Salesforce</li>
                 </ul>
             </div>
             <div class="skill-bucket">
-                <h4 style="margin:0 0 10px 0;">Business Strategy</h4>
+                <h4 style="margin:0 0 10px 0;">💡 Business Strategy</h4>
                 <ul class="skill-list">
                     <li>KPI Development, Root Cause Analysis, Trend Analysis</li>
                     <li>Lean Six Sigma, Test & Learn Experimentation</li>
@@ -110,6 +121,7 @@
             <ul>
                 <li>Executed analytics-driven operational processes supporting global enterprise initiatives.</li>
                 <li>Built automated dashboards reducing manual reporting effort by 40%.</li>
+                <li>Led KPI governance to track operational outcomes for leadership decision-making.</li>
             </ul>
         </div>
     </div>
@@ -143,8 +155,22 @@
         <h2 class="section-header">Research & Publications</h2>
         <div class="pub-card" data-aos="fade-right">
             <h3 style="margin: 5px 0;">Aspect Extraction & Lexicon Computation</h3>
-            <p>NLP-based Opinion Mining of Nykaa product reviews using NLTK.</p>
+            <p>NLP-based Opinion Mining of Nykaa product reviews using NLTK to quantify brand sentiment.</p>
             <a href="https://ijrbat.in/upload_papers/3006202110581611.%20T%20Sai%20Sravani,%20K%20Maneesha%20Reddy,%20S%20Nirupama.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
+        </div>
+        <div class="pub-card" data-aos="fade-right" data-aos-delay="100">
+            <h3 style="margin: 5px 0;">Text Based Fruit Classifier</h3>
+            <p>Developed a machine learning model using KNN and SVM to classify fruit datasets based on physical attributes.</p>
+            <a href="https://ijrbat.in/upload_papers/0207202107240015.%20T%20Sai%20Sravani,%20K%20Divya%20Teja%20and%20Sunil%20Bhutada.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
+        </div>
+    </div>
+
+    <div id="mentions">
+        <h2 class="section-header">Special Mentions</h2>
+        <div class="pub-card" data-aos="fade-up">
+            <span class="project-meta">Reviewer | SNIST</span>
+            <h3 style="margin: 5px 0;">Journal of Scientific Research and Reports</h3>
+            <p>Reviewing manuscripts in research areas of interest to enhance journal quality. Certificate No: PRJSRR129549T.</p>
         </div>
     </div>
 
@@ -156,6 +182,7 @@
         </div>
     </div>
 </div>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
