@@ -23,24 +23,35 @@
         .name-header { font-size: 5rem; font-weight: 900; margin: 0; color: #000000; letter-spacing: -3px; line-height: 0.85; }
         .title-sub { font-size: 1.6rem; color: var(--asu-maroon); margin: 10px 0 5px 0; font-weight: 700; }
 
-        .section-header { color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px; margin-top: 50px; border-left: 5px solid var(--asu-gold); padding-left: 15px; }
+        .section-header { color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px; margin-top: 50px; border-left: 5px solid var(--asu-gold); padding-left: 15px; margin-bottom: 25px; }
+        
+        /* New Coursework Grid */
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .course-card { background: white; padding: 15px; border-radius: 8px; border-bottom: 3px solid var(--asu-maroon); text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--asu-maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
         .project-block { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
         .project-meta { color: var(--asu-maroon); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; }
         
+        .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .skill-bucket { background: white; padding: 20px; border-radius: 8px; border-top: 3px solid var(--asu-maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .skill-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
+        .tech-stack { color: var(--asu-maroon); font-weight: bold; font-size: 0.85rem; margin-top: 10px; display: block; }
+
         .pub-card { border-left: 4px solid var(--asu-gold); background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .pub-link { display: inline-block; margin-top: 10px; color: var(--asu-maroon); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--asu-gold); transition: 0.3s; }
         
-        .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; }
+        .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; }
+        .btn-secondary { background: white; color: var(--asu-maroon); border: 2px solid var(--asu-maroon); padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; }
     </style>
 </head>
 <body>
 
 <nav>
     <a href="#about">About</a>
+    <a href="#coursework">Coursework</a>
+    <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#mentions">Mentions</a>
 </nav>
 
 <div class="container">
@@ -50,38 +61,81 @@
         <p>MS Business Analytics | Arizona State University</p>
     </header>
 
+    <div id="coursework">
+        <h2 class="section-header">Relevant Master's Coursework</h2>
+        <div class="course-grid" data-aos="fade-up">
+            <div class="course-card">Enterprise Data Analytics</div>
+            <div class="course-card">Programming for AI & Data Analytics</div>
+            <div class="course-card">Descriptive & Predictive Analytics</div>
+            <div class="course-card">Business Process Analytics</div>
+            <div class="course-card">Advanced Marketing Analytics</div>
+        </div>
+    </div>
+
+    <div id="skills">
+        <h2 class="section-header">Technical Arsenal</h2>
+        <div class="skills-container" data-aos="fade-up">
+            <div class="skill-bucket">
+                <h4 style="margin:0 0 10px 0;">Analytics & Programming</h4>
+                <ul class="skill-list">
+                    <li>SQL, PostgreSQL, Python (Pandas, Scikit)</li>
+                </ul>
+            </div>
+            <div class="skill-bucket">
+                <h4 style="margin:0 0 10px 0;">Reporting & Visualization</h4>
+                <ul class="skill-list">
+                    <li>Tableau, Power BI, Advanced Excel</li>
+                </ul>
+            </div>
+            <div class="skill-bucket">
+                <h4 style="margin:0 0 10px 0;">Data & Tools</h4>
+                <ul class="skill-list">
+                    <li>SQL Server, MySQL, Data Warehousing, Salesforce</li>
+                </ul>
+            </div>
+            <div class="skill-bucket">
+                <h4 style="margin:0 0 10px 0;">Business Strategy</h4>
+                <ul class="skill-list">
+                    <li>KPI Development, Root Cause Analysis, Trend Analysis</li>
+                    <li>Lean Six Sigma, Test & Learn Experimentation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div id="experience">
         <h2 class="section-header">Professional Experience</h2>
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Capgemini | Senior Analyst (Jan 2024 - Dec 2024)</span>
             <ul>
-                <li>Built automated dashboards using SQL and Power BI, reducing manual effort by 40%.</li>
-                <li>Led KPI governance to track operational outcomes for leadership decision-making.</li>
+                <li>Executed analytics-driven operational processes supporting global enterprise initiatives.</li>
+                <li>Built automated dashboards reducing manual reporting effort by 40%.</li>
             </ul>
         </div>
     </div>
 
     <div id="projects">
-        <h2 class="section-header">Key Projects</h2>
+        <h2 class="section-header">Academic Projects</h2>
         
         <div class="project-block" data-aos="fade-up">
-            <span class="project-meta">Salesforce | Independent Project (Jan 2022 - Feb 2022)</span>
-            <h3>Salesforce Expense Report App</h3>
-            <p>Developed a custom application utilizing <b>Data Access Security</b>, <b>Validation Rules</b>, and <b>Automation Processes</b> to streamline internal financial reporting.</p>
+            <span class="project-meta">Honor Health | Capstone (Sep - Dec 2025)</span>
+            <h3>Healthcare Inventory Management</h3>
+            <ul style="font-size: 0.9rem;">
+                <li>Led data-driven analysis of inventory optimization across multiple warehouses.</li>
+                <li>Designed test-and-learn experiments for replenishment strategies.</li>
+                <li>Built interactive dashboards in Power BI and Excel to monitor KPIs.</li>
+            </ul>
+            <span class="tech-stack">Skills: Power BI, KPI Development, Inventory Strategy</span>
         </div>
 
         <div class="project-block" data-aos="fade-up">
-            <span class="project-meta">Honor Health | Capstone Project</span>
-            <h3>Healthcare Inventory Management</h3>
-            <p>Optimized replenishment strategies to reduce stockouts and built Power BI KPI dashboards.</p>
-        </div>
-    </div>
-
-    <div id="certifications">
-        <h2 class="section-header">Certifications</h2>
-        <div class="pub-card" data-aos="zoom-in">
-            <h3 style="margin: 0;">Salesforce Certified Platform App Builder</h3>
-            <p>Demonstrated expertise in designing, building, and implementing custom applications on the Salesforce platform.</p>
+            <span class="project-meta">ASU Academic Project (Mar - Apr 2025)</span>
+            <h3>Student Performance Prediction</h3>
+            <ul style="font-size: 0.9rem;">
+                <li>Developed predictive models in Python using Neural Networks and Random Forest.</li>
+                <li>Analyzed historical performance data to identify key outcome drivers.</li>
+            </ul>
+            <span class="tech-stack">Skills: Python, Neural Networks, Random Forest</span>
         </div>
     </div>
 
@@ -89,23 +143,17 @@
         <h2 class="section-header">Research & Publications</h2>
         <div class="pub-card" data-aos="fade-right">
             <h3 style="margin: 5px 0;">Aspect Extraction & Lexicon Computation</h3>
-            <p>NLP-based Opinion Mining of Nykaa product reviews to quantify customer sentiment.</p>
-            <a href="https://ijrbat.in/upload_papers/3006202110581611.%20T%20Sai%20Sravani,%20K%20Maneesha%20Reddy,%20S%20Nirupama.pdf" target="_blank" class="pub-link">View Paper &rarr;</a>
-        </div>
-    </div>
-
-    <div id="mentions">
-        <h2 class="section-header">Special Mentions</h2>
-        <div class="pub-card" data-aos="fade-up">
-            <h3 style="margin: 0;">Journal Reviewer</h3>
-            <p>Reviewer for the <i>Journal of Scientific Research and Reports</i>.</p>
-            <p><i>Certificate No: PRJSRR129549T</i></p>
+            <p>NLP-based Opinion Mining of Nykaa product reviews using NLTK.</p>
+            <a href="https://ijrbat.in/upload_papers/3006202110581611.%20T%20Sai%20Sravani,%20K%20Maneesha%20Reddy,%20S%20Nirupama.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
         </div>
     </div>
 
     <div class="contact-section" id="contact" style="text-align: center; margin-top: 50px; padding: 40px; background: var(--asu-maroon); border-radius: 15px; color: white;">
         <h2 style="color:var(--asu-gold)">Let's Connect</h2>
-        <a href="Resume_Sai_Sravani.pdf" download class="btn-main">Download Resume (PDF)</a>
+        <div style="margin-top: 20px;">
+            <a href="Resume_Sai_Sravani.pdf" download class="btn-main">Download Resume (PDF)</a>
+            <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-secondary">LinkedIn Profile</a>
+        </div>
     </div>
 </div>
 
