@@ -3,80 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Senior Business Analyst</title>
+    <title>Sai Sravani | Senior Business Analyst</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        body { font-family: 'Inter', -apple-system, sans-serif; color: #2d3436; line-height: 1.7; background: #ffffff; margin: 0; }
-        .container { max-width: 800px; margin: 0 auto; padding: 80px 24px; }
+        :root { --navy: #0a3d62; --gold: #ffb142; --slate: #2d3436; --glass: rgba(255, 255, 255, 0.95); }
         
-        h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
-        h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 60px; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 30px; }
-        .lead { font-size: 1.25rem; color: #636e72; margin-bottom: 40px; }
-        
-        .history-item { border-left: 2px solid #ffb142; padding-left: 20px; margin-bottom: 30px; position: relative; }
-        .history-item::before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; background: #ffb142; border-radius: 50%; }
-        .role-title { font-weight: 700; font-size: 1.1rem; display: block; }
-        .company-date { font-size: 0.9rem; color: #636e72; margin-bottom: 8px; display: block; }
-        .achievement { font-size: 0.9rem; color: #2d3436; margin: 5px 0; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: var(--slate); 
+            line-height: 1.7; 
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-attachment: fixed;
+        }
 
-        .pill { display: inline-block; border: 1px solid #dfe6e9; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; margin-right: 8px; margin-bottom: 8px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
         
-        /* Button Styles */
-        .btn-container { margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap; }
-        .btn { display: inline-block; color: #2d3436; font-weight: 700; text-decoration: none; border-bottom: 2px solid #ffb142; transition: 0.3s; padding: 5px 0; }
-        .btn:hover { background: #fff9f0; border-bottom-width: 4px; }
-        .btn-primary { background: #0a3d62; color: white; border-bottom: none; padding: 10px 20px; border-radius: 5px; }
-        .btn-primary:hover { background: #ffb142; color: #0a3d62; }
+        /* Header & Name */
+        .hero { min-height: 40vh; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 40px; }
+        .name-top { text-transform: uppercase; letter-spacing: 4px; color: var(--gold); font-weight: 700; margin-bottom: 10px; }
+        h1 { font-size: 3.5rem; font-weight: 800; margin: 0; color: var(--navy); }
+        .tagline { font-size: 1.4rem; color: #576574; margin: 10px 0 25px 0; font-weight: 300; }
+
+        /* About Section */
+        .about-box { background: var(--glass); padding: 30px; border-radius: 15px; margin-bottom: 40px; border-left: 5px solid var(--navy); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+        .section-title { border-bottom: 2px solid var(--navy); display: inline-block; margin-top: 50px; margin-bottom: 30px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 1px; }
+
+        /* Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .skill-bucket { background: var(--glass); padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .skill-bucket h4 { margin: 0 0 10px 0; color: var(--navy); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+        .skill-tag { display: inline-block; background: #e9ecef; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; margin: 2px; font-weight: 500; }
+
+        /* Project Cards */
+        .project-block { background: var(--glass); padding: 35px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: 0.3s; }
+        .project-block:hover { transform: translateY(-5px); }
+        .project-meta { color: #ff9f43; font-weight: 700; font-size: 0.85rem; margin-bottom: 5px; display: block; }
+        .bullet-list { padding-left: 20px; font-size: 0.95rem; }
+
+        .btn-primary { background: var(--navy); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; }
+        .btn-primary:hover { background: var(--gold); color: var(--navy); }
     </style>
 </head>
 <body>
 
-<div class="container" data-aos="fade-in" data-aos-duration="1000">
-    <h1>Senior Business Analyst <span style="color:#ffb142">.</span></h1>
-    <p class="lead">Specializing in KPI governance and operational efficiency. MS Business Analytics @ Arizona State University.</p>
-
-    <h2>Work History</h2>
-    
-    <div class="history-item" data-aos="fade-up">
-        <span class="role-title">Senior Analyst</span>
-        <span class="company-date">Capgemini | Jan 2024 – Dec 2024</span>
-        <p class="achievement">• Reduced manual reporting effort by 40% using SQL and Power BI automation.</p>
-        <p class="achievement">• Led KPI governance and root cause analysis to support leadership decision-making.</p>
+<div class="container">
+    <div class="hero" data-aos="fade-down">
+        <div class="name-top">Sai Sravani</div>
+        <h1>Senior Business Analyst <span style="color:var(--gold)">.</span></h1>
+        <p class="tagline">Bridging Data Science and Global Operations Strategy</p>
     </div>
 
-    <div class="history-item" data-aos="fade-up">
-        <span class="role-title">Analyst</span>
-        <span class="company-date">Capgemini | Apr 2022 – Dec 2023</span>
-        <p class="achievement">• Structured ambiguous operational questions into actionable analytical frameworks.</p>
-        <p class="achievement">• Developed optimized SQL queries for enterprise datasets in Agile environments.</p>
+    <div class="about-box" data-aos="fade-up">
+        <p>I am a Business Analytics professional with <b>3+ years of experience</b> supporting global enterprise initiatives at <b>Capgemini</b>. My expertise lies in <b>KPI governance</b>, process optimization, and translating complex datasets into actionable leadership insights. Currently, I am expanding my technical depth through an <b>MS in Business Analytics at Arizona State University</b>, specializing in predictive modeling and supply chain efficiency.</p>
     </div>
 
-    <h2>Academic Projects</h2>
-    <div class="history-item" data-aos="fade-up">
-        <span class="role-title">MS in Business Analytics</span>
-        <span class="company-date">Arizona State University</span>
-        <p class="achievement">• Honor Health Capstone: Optimized healthcare inventory replenishment strategies.</p>
-        <p class="achievement">• Student Performance Prediction: Built Random Forest and Neural Network models.</p>
+    <h2 class="section-title" data-aos="fade-up">Technical Arsenal</h2>
+    <div class="skills-grid">
+        <div class="skill-bucket" data-aos="zoom-in">
+            <h4>Analytics & Programming</h4>
+            <span class="skill-tag">Python (Pandas/Scikit)</span>
+            <span class="skill-tag">SQL (PostgreSQL/MySQL)</span>
+            <span class="skill-tag">Data Warehousing</span>
+            <span class="skill-tag">Predictive Modeling</span>
+        </div>
+        <div class="skill-bucket" data-aos="zoom-in" data-aos-delay="100">
+            <h4>Visualization & CRM</h4>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Advanced Excel</span>
+            <span class="skill-tag">Salesforce Certified</span>
+        </div>
+        <div class="skill-bucket" data-aos="zoom-in" data-aos-delay="200">
+            <h4>Business Strategy</h4>
+            <span class="skill-tag">KPI Development</span>
+            <span class="skill-tag">Root Cause Analysis</span>
+            <span class="skill-tag">Lean Six Sigma</span>
+            <span class="skill-tag">Agile/SCRUM</span>
+        </div>
     </div>
 
-    <h2>Technical Toolkit</h2>
-    <div style="margin-top: 20px;" data-aos="fade-up">
-        <span class="pill">Python (Pandas/Scikit)</span>
-        <span class="pill">SQL & PostgreSQL</span>
-        <span class="pill">Power BI & Tableau</span>
-        <span class="pill">Salesforce App Builder</span>
-        <span class="pill">Lean Six Sigma</span>
+    <h2 class="section-title" data-aos="fade-up">Professional Milestones</h2>
+
+    <div class="project-block" data-aos="fade-up">
+        <span class="project-meta">EXPERIENCE | CAPGEMINI</span>
+        <h3>Senior Analyst & KPI Lead</h3>
+        <ul class="bullet-list">
+            <li>Executed analytics-driven operational processes to support global enterprise initiatives.</li>
+            <li>Automated dashboard reporting in SQL and Power BI, <b>reducing manual effort by 40%</b>.</li>
+            <li>Conducted root cause analysis on underperforming metrics to drive corrective actions for leadership.</li>
+        </ul>
     </div>
 
-    <h2>Contact & Resume</h2>
-    <div class="btn-container">
-        <a href="Resume_Sai_Sravani.pdf" download class="btn-primary">Download Resume (PDF)</a>
-        <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn">Connect on LinkedIn &rarr;</a>
+    <div class="project-block" data-aos="fade-up">
+        <span class="project-meta">CAPSTONE | HONOR HEALTH</span>
+        <h3>Healthcare Inventory Optimization</h3>
+        <ul class="bullet-list">
+            <li>Analyzed item-level data to optimize replenishment strategies and reduce stockouts.</li>
+            <li>Engineered KPI dashboards to monitor operational efficiency and supply chain resource availability.</li>
+        </ul>
+    </div>
+
+    <div class="project-block" data-aos="fade-up">
+        <span class="project-meta">PREDICTIVE MODELING | ACADEMIC</span>
+        <h3>Student Performance Analytics</h3>
+        <ul class="bullet-list">
+            <li>Developed predictive models using <b>Random Forest and Neural Networks</b> in Python.</li>
+            <li>Utilized <b>SHAP values</b> to provide explainable insights for proactive stakeholder intervention.</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 60px;" data-aos="zoom-in">
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="Resume_Sai_Sravani.pdf" download class="btn-primary">Download Resume (PDF)</a>
+            <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-primary" style="background:transparent; color: var(--navy); border: 2px solid var(--navy);">Connect on LinkedIn</a>
+        </div>
     </div>
 </div>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init({ once: true, duration: 800 });</script>
+<script>AOS.init({ duration: 1000, once: true });</script>
 
 </body>
 </html>
