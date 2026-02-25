@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Sravani | Business Analyst</title>
+    <title>Sai Sravani | Business Analyst Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         :root { --asu-maroon: #8C1D40; --asu-gold: #FFC627; --slate: #2d3436; --glass: rgba(255, 255, 255, 0.96); }
@@ -20,34 +20,21 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
         
-        /* Optimized Hero Section with Side-by-Side Image Space */
+        /* Hero Section with Protected Image View */
         .hero { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
+            display: flex; align-items: center; justify-content: space-between; 
             background: linear-gradient(rgba(140, 29, 64, 0.9), rgba(140, 29, 64, 0.9)), 
                         url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000'); 
-            background-size: cover;
-            background-position: center;
-            padding: 50px; 
-            border-radius: 20px; 
-            color: white; 
-            margin-bottom: 40px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            background-size: cover; background-position: center; padding: 50px; 
+            border-radius: 20px; color: white; margin-bottom: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
         .hero-text { flex: 1; padding-right: 30px; }
-        .hero-image-space { 
-            flex: 0 0 200px; 
-            height: 200px; 
-            border: 4px solid var(--asu-gold); 
-            border-radius: 50%; 
-            overflow: hidden; 
-            background: rgba(255,255,255,0.1); 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .hero-image-space { flex: 0 0 200px; height: 200px; border: 4px solid var(--asu-gold); border-radius: 50%; overflow: hidden; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; }
+        
+        .profile-pic { 
+            width: 100%; height: 100%; object-fit: cover;
+            pointer-events: none; user-select: none; -webkit-user-drag: none; /* Protection layers */
         }
-        .hero-image-space img { width: 100%; height: 100%; object-fit: cover; }
 
         .name-header { font-size: 3.5rem; font-weight: 900; margin: 0; letter-spacing: -2px; line-height: 1; color: var(--asu-gold); }
         .title-sub { font-size: 1.4rem; color: white; margin: 10px 0; font-weight: 700; border-bottom: 2px solid var(--asu-gold); display: inline-block; padding-bottom: 5px; }
@@ -55,12 +42,14 @@
         .about-section { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid var(--asu-maroon); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .section-header { color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px; margin-top: 50px; border-left: 5px solid var(--asu-gold); padding-left: 15px; margin-bottom: 25px; }
         
-        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 40px; }
-        .course-card { background: white; padding: 15px; border-radius: 8px; border-bottom: 3px solid var(--asu-maroon); text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--asu-maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        /* Uniform Coursework Grid */
+        .course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 40px; }
+        .course-card { background: white; padding: 20px; border-radius: 8px; border-bottom: 4px solid var(--asu-maroon); text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--asu-maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.05); min-height: 60px; display: flex; align-items: center; justify-content: center; }
 
+        /* Uniform 2x2 Skills Grid */
         .skills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .skill-bucket { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid var(--asu-maroon); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
-        .skill-bucket:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .skill-bucket:hover { transform: translateY(-5px); }
         .skill-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 
         .project-block { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
@@ -73,7 +62,11 @@
         .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; }
         .btn-secondary { background: white; color: var(--asu-maroon); border: 2px solid var(--asu-maroon); padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; }
 
-        @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .hero-text { padding-right: 0; margin-bottom: 20px; } .skills-container { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { 
+            .hero { flex-direction: column; text-align: center; } 
+            .hero-text { padding-right: 0; margin-bottom: 20px; } 
+            .course-grid, .skills-container { grid-template-columns: 1fr; } 
+        }
     </style>
 </head>
 <body>
@@ -94,14 +87,14 @@
             <p style="font-size: 1.1rem; opacity: 0.9;">MS Business Analytics | Arizona State University</p>
         </div>
         <div class="hero-image-space">
-            <img src="profile.jpg" alt="Sai Sravani Profile">
+            <img src="https://drive.google.com/thumbnail?id=YOUR_FILE_ID&sz=w1000" 
+                 alt="Sai Sravani Profile" class="profile-pic" oncontextmenu="return false;">
         </div>
     </header>
 
     <section id="about" class="about-section" data-aos="fade-up">
         <h2 style="margin-top: 0; color: var(--asu-maroon); font-size: 1.2rem; text-transform: uppercase;">Professional Profile</h2>
-        <p>I am a results-driven <b>Business Analyst</b> with over 2.8+ years of experience in driving operational excellence through data-driven strategies. My background at <b>Capgemini</b> involved architecting KPI ecosystems and automating complex reporting workflows, successfully reducing manual effort by <b>40%</b>.</p>
-        <p>Currently, I am furthering my expertise in predictive modeling, AI programming, and advanced marketing analytics at ASU. I am passionate about transforming unstructured data into actionable insights and bridging the gap between technical complexity and business growth.</p>
+        <p>I am a results-driven <b>Business Analyst</b> with over 2.8+ years of experience in driving operational excellence. My background at <b>Capgemini</b> involved architecting KPI ecosystems and automating complex reporting workflows, successfully reducing manual effort by <b>40%</b>. Currently pursuing an <b>MS in Business Analytics</b> at ASU.</p>
     </section>
 
     <section id="coursework">
@@ -133,10 +126,7 @@
             </div>
             <div class="skill-bucket">
                 <h4 style="margin:0 0 10px 0;">💡 Business Strategy</h4>
-                <ul class="skill-list">
-                    <li>KPI Development, Root Cause Analysis, Trend Analysis</li>
-                    <li>Lean Six Sigma, Test & Learn Experimentation</li>
-                </ul>
+                <ul class="skill-list"><li>KPI Development, Root Cause Analysis, Trend Analysis</li></ul>
             </div>
         </div>
     </section>
@@ -145,19 +135,17 @@
         <h2 class="section-header">Professional Journey</h2>
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Capgemini | Senior Analyst (Jan 2024 - Dec 2024)</span>
-            <ul style="margin-bottom:0;">
+            <ul>
                 <li>Executed analytics-driven operational processes supporting global enterprise initiatives.</li>
                 <li>Built automated dashboards reducing manual reporting effort by 40%.</li>
                 <li>Led KPI governance to track operational outcomes for leadership decision-making.</li>
-                <li>Mentored junior analysts on analytics best practices and visualization standards.</li>
             </ul>
         </div>
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Capgemini | Analyst (Apr 2022 - Dec 2023)</span>
-            <ul style="margin-bottom:0;">
-                <li>Translated ambiguous business questions into structured analytical frameworks for customer and product level insights.</li>
+            <ul>
+                <li>Translated ambiguous business questions into structured analytical frameworks.</li>
                 <li>Optimized SQL queries to analyze large datasets and inform performance trends.</li>
-                <li>Collaborated in Agile teams using JIRA and Confluence to manage analytics deliverables.</li>
             </ul>
         </div>
     </section>
@@ -167,39 +155,26 @@
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Honor Health | Capstone (Sep - Dec 2025)</span>
             <h3>Healthcare Inventory Management</h3>
-            <ul style="font-size: 0.9rem;">
-                <li>Led data-driven analysis of inventory optimization across multiple warehouses.</li>
-                <li>Designed test-and-learn experiments for replenishment strategies.</li>
-                <li>Built interactive dashboards in Power BI and Excel to monitor KPIs.</li>
-            </ul>
+            <p>Led data-driven analysis of inventory optimization across multiple warehouses.</p>
             <span class="tech-stack">Skills: Power BI, KPI Development, Inventory Strategy</span>
         </div>
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">ASU Academic Project (Mar - Apr 2025)</span>
             <h3>Student Performance Prediction</h3>
-            <ul style="font-size: 0.9rem;">
-                <li>Developed predictive models in Python using Neural Networks and Random Forest.</li>
-                <li>Analyzed historical performance data to identify key outcome drivers.</li>
-            </ul>
+            <p>Developed predictive models in Python using Neural Networks and Random Forest.</p>
             <span class="tech-stack">Skills: Python, Neural Networks, Random Forest</span>
         </div>
     </section>
 
     <section id="publications">
-        <h2 class="section-header">Research & Special Mentions</h2>
+        <h2 class="section-header">Research & Publications</h2>
         <div class="pub-card" data-aos="fade-right">
             <span class="project-meta">Publication | IJRBAT</span>
             <h3 style="margin: 5px 0;">Aspect Extraction & Lexicon Computation</h3>
-            <p>NLP-based Opinion Mining of Nykaa product reviews to quantify customer sentiment.</p>
+            <p>NLP-based Opinion Mining of Nykaa product reviews.</p>
             <a href="https://ijrbat.in/upload_papers/3006202110581611.%20T%20Sai%20Sravani,%20K%20Maneesha%20Reddy,%20S%20Nirupama.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
         </div>
         <div class="pub-card" data-aos="fade-right" data-aos-delay="100">
-            <span class="project-meta">Publication | IJRBAT</span>
-            <h3 style="margin: 5px 0;">Text Based Fruit Classifier</h3>
-            <p>Machine learning model using KNN and SVM to classify fruit datasets.</p>
-            <a href="https://ijrbat.in/upload_papers/0207202107240015.%20T%20Sai%20Sravani,%20K%20Divya%20Teja%20and%20Sunil%20Bhutada.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
-        </div>
-        <div class="pub-card" data-aos="fade-up">
             <span class="project-meta">Special Mention | Journal Reviewer</span>
             <h3 style="margin: 5px 0;">Journal of Scientific Research and Reports</h3>
             <p>Reviewing manuscripts in research areas of data science to enhance journal quality.</p>
