@@ -6,59 +6,84 @@
     <title>Sai Sravani | Business Analyst</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-    :root { --asu-maroon: #8C1D40; --asu-gold: #FFC627; --slate: #2d3436; --glass: rgba(255, 255, 255, 0.96); }
-    
-    body { 
-        font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; margin: 0;
-        background-color: #f8f9fa;
-        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 80 L30 50 L50 70 L80 20' stroke='%238c1d40' stroke-width='1' fill='none' opacity='0.05'/%3E%3Crect x='10' y='40' width='5' height='40' fill='%238c1d40' opacity='0.03'/%3E%3Crect x='20' y='55' width='5' height='25' fill='%238c1d40' opacity='0.03'/%3E%3Crect x='30' y='30' width='5' height='50' fill='%238c1d40' opacity='0.03'/%3E%3C/svg%3E");
-        background-attachment: fixed;
-    }
+        :root { --asu-maroon: #8C1D40; --asu-gold: #FFC627; --slate: #2d3436; --glass: rgba(255, 255, 255, 0.96); }
+        
+        body { 
+            font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; margin: 0;
+            background-color: #f8f9fa;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 80 L30 50 L50 70 L80 20' stroke='%238c1d40' stroke-width='1' fill='none' opacity='0.05'/%3E%3Crect x='10' y='40' width='5' height='40' fill='%238c1d40' opacity='0.03'/%3E%3Crect x='20' y='55' width='5' height='25' fill='%238c1d40' opacity='0.03'/%3E%3Crect x='30' y='30' width='5' height='50' fill='%238c1d40' opacity='0.03'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
 
-    nav { background: var(--asu-maroon); padding: 15px 0; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    nav a { color: var(--asu-gold); text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+        nav { background: var(--asu-maroon); padding: 15px 0; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        nav a { color: var(--asu-gold); text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 
-    .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
-    
-    /* Header with Photo */
-    .hero { display: flex; align-items: center; justify-content: space-between; border-bottom: 4px solid var(--asu-gold); padding-bottom: 25px; margin-bottom: 25px; flex-wrap: wrap; }
-    .hero-text { flex: 1; min-width: 300px; }
-    .profile-pic { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--asu-gold); object-fit: cover; box-shadow: 0 10px 20px rgba(0,0,0,0.1); margin-left: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
+        
+        /* Optimized Hero Section with Side-by-Side Image Space */
+        .hero { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            background: linear-gradient(rgba(140, 29, 64, 0.9), rgba(140, 29, 64, 0.9)), 
+                        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000'); 
+            background-size: cover;
+            background-position: center;
+            padding: 50px; 
+            border-radius: 20px; 
+            color: white; 
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        .hero-text { flex: 1; padding-right: 30px; }
+        .hero-image-space { 
+            flex: 0 0 200px; 
+            height: 200px; 
+            border: 4px solid var(--asu-gold); 
+            border-radius: 50%; 
+            overflow: hidden; 
+            background: rgba(255,255,255,0.1); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-image-space img { width: 100%; height: 100%; object-fit: cover; }
 
-    .name-header { font-size: 4.5rem; font-weight: 900; margin: 0; color: #000000; letter-spacing: -2px; line-height: 1; }
-    .title-sub { font-size: 1.6rem; color: var(--asu-maroon); margin: 10px 0 5px 0; font-weight: 700; }
+        .name-header { font-size: 3.5rem; font-weight: 900; margin: 0; letter-spacing: -2px; line-height: 1; color: var(--asu-gold); }
+        .title-sub { font-size: 1.4rem; color: white; margin: 10px 0; font-weight: 700; border-bottom: 2px solid var(--asu-gold); display: inline-block; padding-bottom: 5px; }
 
-    .about-section { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid var(--asu-maroon); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    .section-header { color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px; margin-top: 50px; border-left: 5px solid var(--asu-gold); padding-left: 15px; margin-bottom: 25px; }
-    
-    .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px; }
-    .course-card { background: white; padding: 15px; border-radius: 8px; border-bottom: 3px solid var(--asu-maroon); text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--asu-maroon); }
+        .about-section { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid var(--asu-maroon); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .section-header { color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px; margin-top: 50px; border-left: 5px solid var(--asu-gold); padding-left: 15px; margin-bottom: 25px; }
+        
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .course-card { background: white; padding: 15px; border-radius: 8px; border-bottom: 3px solid var(--asu-maroon); text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--asu-maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
 
-    /* Unified 2x2 Grid for Skills */
-    .skills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .skill-bucket { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid var(--asu-maroon); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
-    .skill-bucket:hover { transform: translateY(-5px); }
-    .skill-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
+        .skills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .skill-bucket { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid var(--asu-maroon); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
+        .skill-bucket:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .skill-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 
-    .project-block { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-    .project-meta { color: var(--asu-maroon); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; }
-    .tech-stack { color: var(--asu-maroon); font-weight: bold; font-size: 0.85rem; margin-top: 10px; display: block; }
+        .project-block { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .project-meta { color: var(--asu-maroon); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 10px; }
+        .tech-stack { color: var(--asu-maroon); font-weight: bold; font-size: 0.85rem; margin-top: 10px; display: block; }
 
-    .pub-card { border-left: 4px solid var(--asu-gold); background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    .pub-link { display: inline-block; margin-top: 10px; color: var(--asu-maroon); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--asu-gold); }
-    
-    .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; }
-    .btn-secondary { background: white; color: var(--asu-maroon); border: 2px solid var(--asu-maroon); padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; }
+        .pub-card { border-left: 4px solid var(--asu-gold); background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .pub-link { display: inline-block; margin-top: 10px; color: var(--asu-maroon); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--asu-gold); }
+        
+        .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; }
+        .btn-secondary { background: white; color: var(--asu-maroon); border: 2px solid var(--asu-maroon); padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; }
 
-    @media (max-width: 600px) { .skills-container { grid-template-columns: 1fr; } .hero { justify-content: center; text-align: center; } .profile-pic { margin: 20px 0; } }
-</style>
+        @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .hero-text { padding-right: 0; margin-bottom: 20px; } .skills-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
 <body>
+
 <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
+    <a href="#publications">Research</a>
 </nav>
 
 <div class="container">
@@ -66,15 +91,29 @@
         <div class="hero-text">
             <h1 class="name-header">Sai Sravani</h1>
             <div class="title-sub">Business Analyst</div>
-            <p>MS Business Analytics | Arizona State University</p>
+            <p style="font-size: 1.1rem; opacity: 0.9;">MS Business Analytics | Arizona State University</p>
         </div>
-        <img src="profile.jpg" alt="Sai Sravani" class="profile-pic">
+        <div class="hero-image-space">
+            <img src="profile.jpg" alt="Sai Sravani Profile">
+        </div>
     </header>
 
     <section id="about" class="about-section" data-aos="fade-up">
-        <h2 style="margin-top: 0; color: var(--asu-maroon); font-size: 1.2rem; text-transform: uppercase;">About Me</h2>
+        <h2 style="margin-top: 0; color: var(--asu-maroon); font-size: 1.2rem; text-transform: uppercase;">Professional Profile</h2>
         <p>I am a results-driven <b>Business Analyst</b> with over 2.8+ years of experience in driving operational excellence through data-driven strategies. My background at <b>Capgemini</b> involved architecting KPI ecosystems and automating complex reporting workflows, successfully reducing manual effort by <b>40%</b>.</p>
         <p>Currently, I am furthering my expertise in predictive modeling, AI programming, and advanced marketing analytics at ASU. I am passionate about transforming unstructured data into actionable insights and bridging the gap between technical complexity and business growth.</p>
+    </section>
+
+    <section id="coursework">
+        <h2 class="section-header">Master's Coursework</h2>
+        <div class="course-grid" data-aos="fade-up">
+            <div class="course-card">Enterprise Data Analytics</div>
+            <div class="course-card">Programming for AI & Data Analytics</div>
+            <div class="course-card">Descriptive & Predictive Analytics</div>
+            <div class="course-card">Business Process Analytics</div>
+            <div class="course-card">Advanced Marketing Analytics</div>
+            <div class="course-card">Quantitative Risk Management</div>
+        </div>
     </section>
 
     <section id="skills">
@@ -103,10 +142,10 @@
     </section>
 
     <section id="experience">
-        <h2 class="section-header">Professional Experience</h2>
+        <h2 class="section-header">Professional Journey</h2>
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Capgemini | Senior Analyst (Jan 2024 - Dec 2024)</span>
-            <ul>
+            <ul style="margin-bottom:0;">
                 <li>Executed analytics-driven operational processes supporting global enterprise initiatives.</li>
                 <li>Built automated dashboards reducing manual reporting effort by 40%.</li>
                 <li>Led KPI governance to track operational outcomes for leadership decision-making.</li>
@@ -115,123 +154,16 @@
         </div>
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Capgemini | Analyst (Apr 2022 - Dec 2023)</span>
-            <ul>
+            <ul style="margin-bottom:0;">
                 <li>Translated ambiguous business questions into structured analytical frameworks for customer and product level insights.</li>
                 <li>Optimized SQL queries to analyze large datasets and inform performance trends.</li>
-                <li>Collaborated in Agile teams using JIRA and Confluence.</li>
+                <li>Collaborated in Agile teams using JIRA and Confluence to manage analytics deliverables.</li>
             </ul>
         </div>
     </section>
 
-    <div class="contact-section" id="contact" style="text-align: center; margin-top: 50px; padding: 40px; background: var(--asu-maroon); border-radius: 15px; color: white;">
-        <h2 style="color:var(--asu-gold)">Let's Connect</h2>
-        <div style="margin-top: 20px;">
-            <a href="Resume_SaiSravani.pdf" download class="btn-main">Download Resume (PDF)</a>
-            <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-secondary">LinkedIn Profile</a>
-        </div>
-    </div>
-</div>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init({ duration: 1000, once: true });</script>
-</body>
-</head>
-<body>
-
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-</nav>
-
-<div class="container">
-    <header class="hero" data-aos="fade-down">
-        <h1 class="name-header">Sai Sravani</h1>
-        <div class="title-sub"> Business Analyst</div>
-        <p>MS Business Analytics | Arizona State University</p>
-    </header>
-
-    <div id="about" class="about-section" data-aos="fade-up">
-        <h2 style="margin-top: 0; color: var(--asu-maroon); font-size: 1.2rem; text-transform: uppercase;">About Me</h2>
-        <p>
-            I am a results-driven <b> Business Analyst</b> with over 2.8+ years of experience in driving operational excellence through data-driven strategies. My background at <b>Capgemini</b> involved architecting KPI ecosystems and automating complex reporting workflows, successfully reducing manual effort by <b>40%</b>.
-        </p>
-        <p>
-             I am furthering my expertise in predictive modeling, AI programming, and advanced marketing analytics. I am passionate about transforming unstructured data into actionable insights and bridging the gap between technical complexity and business growth.
-        </p>
-    </div>
-
-    <div id="coursework">
-        <h2 class="section-header">Relevant Master's Coursework</h2>
-        <div class="course-grid" data-aos="fade-up">
-            <div class="course-card">Enterprise Data Analytics</div>
-            <div class="course-card">Programming for AI & Data Analytics</div>
-            <div class="course-card">Descriptive & Predictive Analytics</div>
-            <div class="course-card">Business Process Analytics</div>
-            <div class="course-card">Advanced Marketing Analytics</div>
-            <div class="course-card">Quantitative Risk Management</div>
-        </div>
-    </div>
-
-    <div id="skills">
-        <h2 class="section-header">Technical Arsenal</h2>
-        <div class="skills-container" data-aos="fade-up">
-            <div class="skill-bucket">
-                <h4 style="margin:0 0 10px 0;">📊 Analytics & Programming</h4>
-                <ul class="skill-list">
-                    <li>SQL, PostgreSQL, Python (Pandas, Scikit)</li>
-                </ul>
-            </div>
-            <div class="skill-bucket">
-                <h4 style="margin:0 0 10px 0;">📈 Reporting & Visualization</h4>
-                <ul class="skill-list">
-                    <li>Tableau, Power BI, Advanced Excel</li>
-                </ul>
-            </div>
-            <div class="skill-bucket">
-                <h4 style="margin:0 0 10px 0;">🛠️ Data & Tools</h4>
-                <ul class="skill-list">
-                    <li>SQL Server, MySQL, Data Warehousing, Salesforce</li>
-                </ul>
-            </div>
-            <div class="skill-bucket">
-                <h4 style="margin:0 0 10px 0;">💡 Business Strategy</h4>
-                <ul class="skill-list">
-                    <li>KPI Development, Root Cause Analysis, Trend Analysis</li>
-                    <li>Lean Six Sigma, Test & Learn Experimentation</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="experience">
-        <h2 class="section-header">Professional Experience</h2>
-        <div class="project-block" data-aos="fade-up">
-            <span class="project-meta">Capgemini | Senior Analyst (Jan 2024 - Dec 2024)</span>
-            <ul>
-                <li>Executed analytics-driven operational processes supporting global enterprise initiatives.</li>
-                <li>Built automated dashboards reducing manual reporting effort by 40%.</li>
-                <li>Led KPI governance to track operational outcomes for leadership decision-making.</li>
-                <li>Mentored junior analysts on analytics best practices, visualization standards, and data governance.</li>
-            </ul>
-        </div>
-    </div>
-     <div class="project-block" data-aos="fade-up">
-            <span class="project-meta">Capgemini |  Analyst (Apr 2022 - Dec 2023)</span>
-            <ul>
-                <li>Translated ambiguous business questions into structured analytical frameworks and measurable metrics for customer and product level
-insights.</li>
-                <li>Developed and optimized SQL queries to clean, transform, and analyze large datasets to deliver insights on performance trends and
-customer behavior, informing actionable recommendations for business and operational teams.</li>
-                <li>Collaborated in Agile teams using JIRA and Confluence to manage analytics deliverables.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="projects">
-        <h2 class="section-header">Academic Projects</h2>
-        
+    <section id="projects">
+        <h2 class="section-header">Academic Impact</h2>
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Honor Health | Capstone (Sep - Dec 2025)</span>
             <h3>Healthcare Inventory Management</h3>
@@ -242,7 +174,6 @@ customer behavior, informing actionable recommendations for business and operati
             </ul>
             <span class="tech-stack">Skills: Power BI, KPI Development, Inventory Strategy</span>
         </div>
-
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">ASU Academic Project (Mar - Apr 2025)</span>
             <h3>Student Performance Prediction</h3>
@@ -252,33 +183,32 @@ customer behavior, informing actionable recommendations for business and operati
             </ul>
             <span class="tech-stack">Skills: Python, Neural Networks, Random Forest</span>
         </div>
-    </div>
+    </section>
 
-    <div id="publications">
-        <h2 class="section-header">Research & Publications</h2>
+    <section id="publications">
+        <h2 class="section-header">Research & Special Mentions</h2>
         <div class="pub-card" data-aos="fade-right">
+            <span class="project-meta">Publication | IJRBAT</span>
             <h3 style="margin: 5px 0;">Aspect Extraction & Lexicon Computation</h3>
-            <p>NLP-based Opinion Mining of Nykaa product reviews using NLTK to quantify brand sentiment.</p>
+            <p>NLP-based Opinion Mining of Nykaa product reviews to quantify customer sentiment.</p>
             <a href="https://ijrbat.in/upload_papers/3006202110581611.%20T%20Sai%20Sravani,%20K%20Maneesha%20Reddy,%20S%20Nirupama.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
         </div>
         <div class="pub-card" data-aos="fade-right" data-aos-delay="100">
+            <span class="project-meta">Publication | IJRBAT</span>
             <h3 style="margin: 5px 0;">Text Based Fruit Classifier</h3>
-            <p>Developed a machine learning model using KNN and SVM to classify fruit datasets based on physical attributes.</p>
+            <p>Machine learning model using KNN and SVM to classify fruit datasets.</p>
             <a href="https://ijrbat.in/upload_papers/0207202107240015.%20T%20Sai%20Sravani,%20K%20Divya%20Teja%20and%20Sunil%20Bhutada.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
         </div>
-    </div>
-
-    <div id="mentions">
-        <h2 class="section-header">Special Mentions</h2>
         <div class="pub-card" data-aos="fade-up">
-            <span class="project-meta">Journal Articles Reviewer </span>
+            <span class="project-meta">Special Mention | Journal Reviewer</span>
             <h3 style="margin: 5px 0;">Journal of Scientific Research and Reports</h3>
-            <p>Reviewing manuscripts in research areas of data science to enhance journal quality. Certificate No: PRJSRR129549T.</p>
+            <p>Reviewing manuscripts in research areas of data science to enhance journal quality.</p>
+            <p style="font-size: 0.85rem; color: var(--asu-maroon);">Certificate No: PRJSRR129549T</p>
         </div>
-    </div>
+    </section>
 
-    <div class="contact-section" id="contact" style="text-align: center; margin-top: 50px; padding: 40px; background: var(--asu-maroon); border-radius: 15px; color: white;">
-        <h2 style="color:var(--asu-gold)">Let's Connect</h2>
+    <div class="contact-section" id="contact" style="text-align: center; margin-top: 50px; padding: 40px; background: var(--asu-maroon); border-radius: 20px; color: white;">
+        <h2 style="color:var(--asu-gold)">Career Collaboration</h2>
         <div style="margin-top: 20px;">
             <a href="Resume_SaiSravani.pdf" download class="btn-main">Download Resume (PDF)</a>
             <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-secondary">LinkedIn Profile</a>
