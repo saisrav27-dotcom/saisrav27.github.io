@@ -10,51 +10,40 @@
             --asu-maroon: #8C1D40; 
             --asu-gold: #FFC627; 
             --slate: #2d3436; 
-            --glass: rgba(255, 255, 255, 0.96); 
+            --glass: rgba(255, 255, 255, 0.94); 
         }
         
         body { 
             font-family: 'Inter', sans-serif; 
             color: var(--slate); 
-            line-height: 1.7; 
+            line-height: 1.6; 
             margin: 0;
-            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            /* Faded Data Graph Background */
+            background-color: #f8f9fa;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238c1d40' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
             background-attachment: fixed;
         }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; position: relative; z-index: 1; }
         
-        /* Header & Large Name */
-        .hero { min-height: 45vh; display: flex; flex-direction: column; justify-content: center; border-bottom: 4px solid var(--asu-gold); padding-bottom: 40px; margin-bottom: 40px; }
-        .name-header { font-size: 5rem; font-weight: 900; margin: 0; color: #000000; letter-spacing: -3px; line-height: 0.9; }
-        .title-sub { font-size: 1.8rem; color: var(--asu-maroon); margin: 15px 0 10px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .hero { display: flex; flex-direction: column; justify-content: center; border-bottom: 4px solid var(--asu-gold); padding-bottom: 20px; margin-bottom: 30px; }
+        .name-header { font-size: 5rem; font-weight: 900; margin: 0; color: #000000; letter-spacing: -3px; line-height: 0.85; }
+        .title-sub { font-size: 1.6rem; color: var(--asu-maroon); margin: 10px 0 5px 0; font-weight: 700; text-transform: uppercase; }
+        .asu-meta { font-size: 1.1rem; color: #576574; font-weight: 500; margin: 0; }
 
-        /* About Section */
-        .about-box { background: var(--glass); padding: 35px; border-radius: 15px; margin-bottom: 40px; border-left: 8px solid var(--asu-maroon); box-shadow: 0 10px 30px rgba(140, 29, 64, 0.1); }
+        .about-box { background: var(--glass); padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 8px solid var(--asu-maroon); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .section-title { border-bottom: 3px solid var(--asu-maroon); display: inline-block; margin-top: 30px; margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; letter-spacing: 2px; font-weight: 800; color: var(--asu-maroon); }
 
-        .section-title { border-bottom: 3px solid var(--asu-maroon); display: inline-block; margin-top: 50px; margin-bottom: 30px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 2px; font-weight: 800; color: var(--asu-maroon); }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .skill-bucket { background: var(--glass); padding: 20px; border-radius: 10px; border-top: 4px solid var(--asu-gold); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .skill-tag { display: inline-block; background: #f8f9fa; color: var(--asu-maroon); border: 1px solid #eee; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; margin: 2px; font-weight: 600; }
 
-        /* Skills Grid */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .skill-bucket { background: var(--glass); padding: 25px; border-radius: 12px; border-top: 4px solid var(--asu-gold); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .skill-tag { display: inline-block; background: #f8f9fa; color: var(--asu-maroon); border: 1px solid #eee; padding: 5px 12px; border-radius: 6px; font-size: 0.85rem; margin: 3px; font-weight: 600; }
-
-        /* Projects */
-        .project-block { background: var(--glass); padding: 35px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; border-right: 4px solid transparent; }
-        .project-block:hover { transform: translateX(10px); border-right: 4px solid var(--asu-gold); }
-        .project-meta { color: var(--asu-maroon); font-weight: 800; font-size: 0.85rem; margin-bottom: 5px; display: block; text-transform: uppercase; }
-
-        /* Restored and Centered Buttons */
-        .contact-section { text-align: center; margin-top: 80px; padding: 50px; background: var(--asu-maroon); border-radius: 20px; color: white; box-shadow: 0 15px 35px rgba(140, 29, 64, 0.3); }
-        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+        .project-block { background: var(--glass); padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .contact-section { text-align: center; margin-top: 50px; padding: 40px; background: var(--asu-maroon); border-radius: 15px; color: white; }
+        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
         
-        /* The Download Button */
-        .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 18px 40px; border-radius: 10px; text-decoration: none; font-weight: 800; transition: 0.3s; display: inline-block; border: none; font-size: 1.1rem; }
-        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255, 198, 39, 0.4); }
-        
-        /* The LinkedIn Button */
-        .btn-outline { background: transparent; color: white; padding: 18px 40px; border-radius: 10px; text-decoration: none; font-weight: 800; transition: 0.3s; display: inline-block; border: 2px solid var(--asu-gold); font-size: 1.1rem; }
-        .btn-outline:hover { background: var(--asu-gold); color: var(--asu-maroon); }
+        .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; border: none; font-size: 1rem; }
+        .btn-outline { background: transparent; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; border: 2px solid var(--asu-gold); font-size: 1rem; }
     </style>
 </head>
 <body>
@@ -63,42 +52,34 @@
     <div class="hero" data-aos="fade-down">
         <h1 class="name-header">Sai Sravani</h1>
         <div class="title-sub">Senior Business Analyst</div>
-        <p style="font-size: 1.3rem; color: #576574; font-weight: 500;">MS Business Analytics | Arizona State University</p>
+        <p class="asu-meta">MS Business Analytics | Arizona State University</p>
     </div>
 
     <div class="about-box" data-aos="fade-up">
-        <p>Strategic Business Analytics professional with <b>3+ years of experience</b> supporting global initiatives at <b>Capgemini</b>. Expert in <b>KPI governance</b> and process optimization, with a proven track record of reducing manual reporting efforts by <b>40%</b> through SQL and Power BI automation.</p>
+        <p>Strategic Business Analytics professional with <b>3+ years of experience</b> supporting global initiatives at <b>Capgemini</b>. Expert in <b>KPI governance</b> and process optimization, reducing manual reporting efforts by <b>40%</b> through SQL and Power BI automation.</p>
     </div>
 
     <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
     <div class="skills-grid">
         <div class="skill-bucket" data-aos="zoom-in">
-            <h4 style="margin:0 0 15px 0; color:var(--asu-maroon); text-transform: uppercase; font-size: 0.85rem;">Analytics & Programming</h4>
-            <span class="skill-tag">SQL</span> <span class="skill-tag">Python (Pandas/Scikit)</span> <span class="skill-tag">PostgreSQL</span> <span class="skill-tag">Predictive Modeling</span>
+            <h4 style="margin:0 0 10px 0; color:var(--asu-maroon); text-transform: uppercase; font-size: 0.8rem;">Analytics & Programming</h4>
+            <span class="skill-tag">SQL</span> <span class="skill-tag">Python</span> <span class="skill-tag">PostgreSQL</span> <span class="skill-tag">Predictive Modeling</span>
         </div>
         <div class="skill-bucket" data-aos="zoom-in" data-aos-delay="100">
-            <h4 style="margin:0 0 15px 0; color:var(--asu-maroon); text-transform: uppercase; font-size: 0.85rem;">Visualization & CRM</h4>
+            <h4 style="margin:0 0 10px 0; color:var(--asu-maroon); text-transform: uppercase; font-size: 0.8rem;">Visualization & CRM</h4>
             <span class="skill-tag">Power BI</span> <span class="skill-tag">Tableau</span> <span class="skill-tag">Salesforce Certified</span> <span class="skill-tag">Advanced Excel</span>
         </div>
     </div>
 
-    <h2 class="section-title" data-aos="fade-up">Selected Milestones</h2>
-
+    <h2 class="section-title" data-aos="fade-up">Professional Milestones</h2>
     <div class="project-block" data-aos="fade-up">
-        <span class="project-meta">PROFESSIONAL | CAPGEMINI</span>
-        <h3 style="color:var(--asu-maroon)">KPI Governance & Automation Lead</h3>
-        <p>Executed analytics-driven processes and automated enterprise reporting cycles, delivering actionable insights for leadership decision-making.</p>
-    </div>
-
-    <div class="project-block" data-aos="fade-up">
-        <span class="project-meta">GRADUATE CAPSTONE | HONOR HEALTH</span>
-        <h3 style="color:var(--asu-maroon)">Healthcare Inventory Optimization</h3>
-        <p>Optimized replenishment strategies via item-level data analysis and engineered Power BI dashboards to track supply chain efficiency.</p>
+        <span style="color:var(--asu-maroon); font-weight:800; font-size:0.8rem; text-transform:uppercase;">Experience | Capgemini</span>
+        <h3 style="color:var(--asu-maroon); margin-top:0;">KPI Governance & Automation Lead</h3>
+        <p style="margin-bottom:0;">Executed analytics-driven processes and automated reporting cycles, delivering actionable insights for leadership.</p>
     </div>
 
     <div class="contact-section" data-aos="zoom-in">
-        <h2 style="margin-top:0; color:var(--asu-gold); font-size: 2rem;">Let's Connect</h2>
-        <p style="font-size: 1.1rem;">Ready to drive business impact through data-driven strategy.</p>
+        <h2 style="margin-top:0; color:var(--asu-gold); font-size: 1.8rem;">Let's Connect</h2>
         <div class="btn-group">
             <a href="Resume_Sai_Sravani.pdf" download class="btn-main">Download Resume (PDF)</a>
             <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-outline">LinkedIn Profile</a>
