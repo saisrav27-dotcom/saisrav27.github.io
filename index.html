@@ -6,118 +6,102 @@
     <title>Sai Sravani | Senior Business Analyst</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        :root { --navy: #0a3d62; --gold: #ffb142; --slate: #2d3436; --glass: rgba(255, 255, 255, 0.95); }
+        :root { 
+            --asu-maroon: #8C1D40; 
+            --asu-gold: #FFC627; 
+            --slate: #2d3436; 
+            --glass: rgba(255, 255, 255, 0.96); 
+        }
         
         body { 
             font-family: 'Inter', sans-serif; 
             color: var(--slate); 
             line-height: 1.7; 
             margin: 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
             background-attachment: fixed;
         }
 
         .container { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
         
-        /* Header & Name */
-        .hero { min-height: 40vh; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 40px; }
-        .name-top { text-transform: uppercase; letter-spacing: 4px; color: var(--gold); font-weight: 700; margin-bottom: 10px; }
-        h1 { font-size: 3.5rem; font-weight: 800; margin: 0; color: var(--navy); }
-        .tagline { font-size: 1.4rem; color: #576574; margin: 10px 0 25px 0; font-weight: 300; }
+        /* Header & Large Name */
+        .hero { min-height: 45vh; display: flex; flex-direction: column; justify-content: center; border-bottom: 4px solid var(--asu-gold); padding-bottom: 40px; margin-bottom: 40px; }
+        .name-header { font-size: 5rem; font-weight: 900; margin: 0; color: #000000; letter-spacing: -3px; line-height: 0.9; }
+        .title-sub { font-size: 1.8rem; color: var(--asu-maroon); margin: 15px 0 10px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
         /* About Section */
-        .about-box { background: var(--glass); padding: 30px; border-radius: 15px; margin-bottom: 40px; border-left: 5px solid var(--navy); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .about-box { background: var(--glass); padding: 35px; border-radius: 15px; margin-bottom: 40px; border-left: 8px solid var(--asu-maroon); box-shadow: 0 10px 30px rgba(140, 29, 64, 0.1); }
 
-        .section-title { border-bottom: 2px solid var(--navy); display: inline-block; margin-top: 50px; margin-bottom: 30px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 1px; }
+        .section-title { border-bottom: 3px solid var(--asu-maroon); display: inline-block; margin-top: 50px; margin-bottom: 30px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 2px; font-weight: 800; color: var(--asu-maroon); }
 
         /* Skills Grid */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .skill-bucket { background: var(--glass); padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .skill-bucket h4 { margin: 0 0 10px 0; color: var(--navy); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
-        .skill-tag { display: inline-block; background: #e9ecef; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; margin: 2px; font-weight: 500; }
+        .skill-bucket { background: var(--glass); padding: 25px; border-radius: 12px; border-top: 4px solid var(--asu-gold); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .skill-tag { display: inline-block; background: #f8f9fa; color: var(--asu-maroon); border: 1px solid #eee; padding: 5px 12px; border-radius: 6px; font-size: 0.85rem; margin: 3px; font-weight: 600; }
 
-        /* Project Cards */
-        .project-block { background: var(--glass); padding: 35px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: 0.3s; }
-        .project-block:hover { transform: translateY(-5px); }
-        .project-meta { color: #ff9f43; font-weight: 700; font-size: 0.85rem; margin-bottom: 5px; display: block; }
-        .bullet-list { padding-left: 20px; font-size: 0.95rem; }
+        /* Projects */
+        .project-block { background: var(--glass); padding: 35px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; border-right: 4px solid transparent; }
+        .project-block:hover { transform: translateX(10px); border-right: 4px solid var(--asu-gold); }
+        .project-meta { color: var(--asu-maroon); font-weight: 800; font-size: 0.85rem; margin-bottom: 5px; display: block; text-transform: uppercase; }
 
-        .btn-primary { background: var(--navy); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; }
-        .btn-primary:hover { background: var(--gold); color: var(--navy); }
+        /* Restored and Centered Buttons */
+        .contact-section { text-align: center; margin-top: 80px; padding: 50px; background: var(--asu-maroon); border-radius: 20px; color: white; box-shadow: 0 15px 35px rgba(140, 29, 64, 0.3); }
+        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+        
+        /* The Download Button */
+        .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 18px 40px; border-radius: 10px; text-decoration: none; font-weight: 800; transition: 0.3s; display: inline-block; border: none; font-size: 1.1rem; }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255, 198, 39, 0.4); }
+        
+        /* The LinkedIn Button */
+        .btn-outline { background: transparent; color: white; padding: 18px 40px; border-radius: 10px; text-decoration: none; font-weight: 800; transition: 0.3s; display: inline-block; border: 2px solid var(--asu-gold); font-size: 1.1rem; }
+        .btn-outline:hover { background: var(--asu-gold); color: var(--asu-maroon); }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="hero" data-aos="fade-down">
-        <div class="name-top">Sai Sravani</div>
-        <h1>Senior Business Analyst <span style="color:var(--gold)">.</span></h1>
-        <p class="tagline">Bridging Data Science and Global Operations Strategy</p>
+        <h1 class="name-header">Sai Sravani</h1>
+        <div class="title-sub">Senior Business Analyst</div>
+        <p style="font-size: 1.3rem; color: #576574; font-weight: 500;">MS Business Analytics | Arizona State University</p>
     </div>
 
     <div class="about-box" data-aos="fade-up">
-        <p>I am a Business Analytics professional with <b>3+ years of experience</b> supporting global enterprise initiatives at <b>Capgemini</b>. My expertise lies in <b>KPI governance</b>, process optimization, and translating complex datasets into actionable leadership insights. Currently, I am expanding my technical depth through an <b>MS in Business Analytics at Arizona State University</b>, specializing in predictive modeling and supply chain efficiency.</p>
+        <p>Strategic Business Analytics professional with <b>3+ years of experience</b> supporting global initiatives at <b>Capgemini</b>. Expert in <b>KPI governance</b> and process optimization, with a proven track record of reducing manual reporting efforts by <b>40%</b> through SQL and Power BI automation.</p>
     </div>
 
-    <h2 class="section-title" data-aos="fade-up">Technical Arsenal</h2>
+    <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
     <div class="skills-grid">
         <div class="skill-bucket" data-aos="zoom-in">
-            <h4>Analytics & Programming</h4>
-            <span class="skill-tag">Python (Pandas/Scikit)</span>
-            <span class="skill-tag">SQL (PostgreSQL/MySQL)</span>
-            <span class="skill-tag">Data Warehousing</span>
-            <span class="skill-tag">Predictive Modeling</span>
+            <h4 style="margin:0 0 15px 0; color:var(--asu-maroon); text-transform: uppercase; font-size: 0.85rem;">Analytics & Programming</h4>
+            <span class="skill-tag">SQL</span> <span class="skill-tag">Python (Pandas/Scikit)</span> <span class="skill-tag">PostgreSQL</span> <span class="skill-tag">Predictive Modeling</span>
         </div>
         <div class="skill-bucket" data-aos="zoom-in" data-aos-delay="100">
-            <h4>Visualization & CRM</h4>
-            <span class="skill-tag">Power BI</span>
-            <span class="skill-tag">Tableau</span>
-            <span class="skill-tag">Advanced Excel</span>
-            <span class="skill-tag">Salesforce Certified</span>
-        </div>
-        <div class="skill-bucket" data-aos="zoom-in" data-aos-delay="200">
-            <h4>Business Strategy</h4>
-            <span class="skill-tag">KPI Development</span>
-            <span class="skill-tag">Root Cause Analysis</span>
-            <span class="skill-tag">Lean Six Sigma</span>
-            <span class="skill-tag">Agile/SCRUM</span>
+            <h4 style="margin:0 0 15px 0; color:var(--asu-maroon); text-transform: uppercase; font-size: 0.85rem;">Visualization & CRM</h4>
+            <span class="skill-tag">Power BI</span> <span class="skill-tag">Tableau</span> <span class="skill-tag">Salesforce Certified</span> <span class="skill-tag">Advanced Excel</span>
         </div>
     </div>
 
-    <h2 class="section-title" data-aos="fade-up">Professional Milestones</h2>
+    <h2 class="section-title" data-aos="fade-up">Selected Milestones</h2>
 
     <div class="project-block" data-aos="fade-up">
-        <span class="project-meta">EXPERIENCE | CAPGEMINI</span>
-        <h3>Senior Analyst & KPI Lead</h3>
-        <ul class="bullet-list">
-            <li>Executed analytics-driven operational processes to support global enterprise initiatives.</li>
-            <li>Automated dashboard reporting in SQL and Power BI, <b>reducing manual effort by 40%</b>.</li>
-            <li>Conducted root cause analysis on underperforming metrics to drive corrective actions for leadership.</li>
-        </ul>
+        <span class="project-meta">PROFESSIONAL | CAPGEMINI</span>
+        <h3 style="color:var(--asu-maroon)">KPI Governance & Automation Lead</h3>
+        <p>Executed analytics-driven processes and automated enterprise reporting cycles, delivering actionable insights for leadership decision-making.</p>
     </div>
 
     <div class="project-block" data-aos="fade-up">
-        <span class="project-meta">CAPSTONE | HONOR HEALTH</span>
-        <h3>Healthcare Inventory Optimization</h3>
-        <ul class="bullet-list">
-            <li>Analyzed item-level data to optimize replenishment strategies and reduce stockouts.</li>
-            <li>Engineered KPI dashboards to monitor operational efficiency and supply chain resource availability.</li>
-        </ul>
+        <span class="project-meta">GRADUATE CAPSTONE | HONOR HEALTH</span>
+        <h3 style="color:var(--asu-maroon)">Healthcare Inventory Optimization</h3>
+        <p>Optimized replenishment strategies via item-level data analysis and engineered Power BI dashboards to track supply chain efficiency.</p>
     </div>
 
-    <div class="project-block" data-aos="fade-up">
-        <span class="project-meta">PREDICTIVE MODELING | ACADEMIC</span>
-        <h3>Student Performance Analytics</h3>
-        <ul class="bullet-list">
-            <li>Developed predictive models using <b>Random Forest and Neural Networks</b> in Python.</li>
-            <li>Utilized <b>SHAP values</b> to provide explainable insights for proactive stakeholder intervention.</li>
-        </ul>
-    </div>
-
-    <div style="text-align: center; margin-top: 60px;" data-aos="zoom-in">
-        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <a href="Resume_Sai_Sravani.pdf" download class="btn-primary">Download Resume (PDF)</a>
-            <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-primary" style="background:transparent; color: var(--navy); border: 2px solid var(--navy);">Connect on LinkedIn</a>
+    <div class="contact-section" data-aos="zoom-in">
+        <h2 style="margin-top:0; color:var(--asu-gold); font-size: 2rem;">Let's Connect</h2>
+        <p style="font-size: 1.1rem;">Ready to drive business impact through data-driven strategy.</p>
+        <div class="btn-group">
+            <a href="Resume_Sai_Sravani.pdf" download class="btn-main">Download Resume (PDF)</a>
+            <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-outline">LinkedIn Profile</a>
         </div>
     </div>
 </div>
