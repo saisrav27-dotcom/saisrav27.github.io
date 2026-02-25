@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Sravani | Business Analyst</title>
+    <title>Sai Sravani | Senior Business Analyst</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         :root { --asu-maroon: #8C1D40; --asu-gold: #FFC627; --slate: #2d3436; --glass: rgba(255, 255, 255, 0.96); }
         
         body { 
             font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; margin: 0;
-            /* Faded Dashboard/Graph Background */
+            /* Faded Data Analytics Node Background */
             background-color: #f8f9fa;
-            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238c1d40' fill-opacity='0.03'%3E%3Crect x='10' y='150' width='10' height='40'/%3E%3Crect x='25' y='130' width='10' height='60'/%3E%3Crect x='40' y='110' width='10' height='80'/%3E%3Ccircle cx='120' cy='50' r='30' fill='none' stroke='%238c1d40' stroke-width='1'/%3E%3Cpath d='M100 150 Q 130 100 180 140' stroke='%238c1d40' stroke-width='1' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%238c1d40' stroke-width='0.5' opacity='0.06'%3E%3Ccircle cx='40' cy='40' r='3'/%3E%3Cpath d='M40 40 L10 10 M40 40 L70 10 M40 40 L40 70 M40 40 L10 70'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='70' cy='10' r='2'/%3E%3Ccircle cx='40' cy='70' r='2'/%3E%3Ccircle cx='10' cy='70' r='2'/%3E%3C/g%3E%3C/svg%3E");
             background-attachment: fixed;
         }
 
-        nav { background: var(--asu-maroon); padding: 15px 0; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 30px; }
+        nav { background: var(--asu-maroon); padding: 15px 0; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         nav a { color: var(--asu-gold); text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 
         .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
@@ -24,22 +24,26 @@
         .name-header { font-size: 5rem; font-weight: 900; margin: 0; color: #000000; letter-spacing: -3px; line-height: 0.85; }
         .title-sub { font-size: 1.6rem; color: var(--asu-maroon); margin: 10px 0 5px 0; font-weight: 700; }
 
+        .section-header { color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px; margin-top: 50px; border-left: 5px solid var(--asu-gold); padding-left: 15px; }
         .project-block { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
         .project-meta { color: var(--asu-maroon); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; }
         
-        /* Publication Link Style */
-        .pub-link { display: inline-block; margin-top: 15px; color: var(--asu-maroon); font-weight: 700; text-decoration: none; border: 1px solid var(--asu-maroon); padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
-        .pub-link:hover { background: var(--asu-maroon); color: white; }
+        .pub-card { border-left: 4px solid var(--asu-gold); background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .pub-link { display: inline-block; margin-top: 10px; color: var(--asu-maroon); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--asu-gold); transition: 0.3s; }
+        .pub-link:hover { background: #fff9e6; }
 
-        .dashboard-img { width: 100%; border-radius: 8px; margin-top: 15px; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .dashboard-preview { background: #eee; height: 250px; border-radius: 8px; margin-top: 15px; border: 2px dashed var(--asu-gold); display: flex; align-items: center; justify-content: center; }
+
+        .btn-main { background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; }
     </style>
 </head>
 <body>
 
 <nav>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#dashboards">Visuals</a>
+    <a href="#projects">Experience</a>
+    <a href="#publications">Publications</a>
+    <a href="#dashboards">Dashboards</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -47,41 +51,55 @@
     <header class="hero" id="about" data-aos="fade-down">
         <h1 class="name-header">Sai Sravani</h1>
         <div class="title-sub">Senior Business Analyst</div>
-        <p>MS Business Analytics | Arizona State University</p>
-        <p>Expertise in <b>KPI governance</b> and <b>Process Optimization</b> with 3+ years of experience.</p>
+        <p>MS Business Analytics @ Arizona State University | Salesforce Certified App Builder</p>
     </header>
 
     <div id="projects">
-        <h2 style="color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px;">Strategic Case Studies</h2>
-        
+        <h2 class="section-header">Operational Impact</h2>
         <div class="project-block" data-aos="fade-up">
-            <span class="project-meta">Statistical Risk Modeling | ASU</span>
-            <h3>Quantitative Risk Simulation</h3>
-            <p>Applied decision analysis using Precision Tree to quantify risk factors in a complex business case study.</p>
-            <a href="Risk_Modeling_Case_Study.pdf" target="_blank" class="pub-link">Read Full Case Study (PDF)</a>
+            <span class="project-meta">Capgemini | Senior Analyst</span>
+            <h3>KPI Governance & Reporting Automation</h3>
+            <p>Supported global enterprise initiatives through KPI governance and process optimization.</p>
+            <ul>
+                <li>Developed automated Power BI dashboards reducing manual reporting effort by 40%.</li>
+                <li>Conducted root cause analysis on underperforming metrics to recommend corrective actions.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="publications">
+        <h2 class="section-header">Research & Publications</h2>
+        
+        <div class="pub-card" data-aos="fade-right">
+            <span class="project-meta">Quantitative Risk Management</span>
+            <h3 style="margin: 5px 0;">Case Study: Statistical Risk Modeling</h3>
+            <p>Utilized <b>Precision Tree</b> and <b>@RISK</b> to build simulations quantifying risk factors and decision pathways.</p>
+            <a href="#" class="pub-link">Download Publication PDF &rarr;</a>
         </div>
 
-        <div class="project-block" data-aos="fade-up">
-            <span class="project-meta">Inventory Management | Honor Health</span>
-            <h3>Supply Chain Optimization</h3>
-            <p>Analyzed replenishment strategies to optimize healthcare inventory levels and reduce stockouts.</p>
-            <a href="Honor_Health_Capstone.pdf" target="_blank" class="pub-link">View Capstone Publication &rarr;</a>
+        <div class="pub-card" data-aos="fade-right" data-aos-delay="100">
+            <span class="project-meta">Advanced Marketing Analytics</span>
+            <h3 style="margin: 5px 0;">Marketing Mix & Price Elasticity Analysis</h3>
+            <p>Applied Bayesian Decision Theory and marketing mix modeling to optimize pricing strategies and balanced scorecards.</p>
+            <a href="#" class="pub-link">View Research Summary &rarr;</a>
         </div>
     </div>
 
     <div id="dashboards">
-        <h2 style="color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px;">Dashboards & Analytics</h2>
+        <h2 class="section-header">Interactive Dashboards</h2>
         <div class="project-block" data-aos="zoom-in">
-            <span class="project-meta">Power BI | Tableau</span>
-            <p>Automated reporting ecosystems reducing manual effort by <b>40%</b>.</p>
-            <img src="dashboard_sample.png" alt="Analytics Dashboard Preview" class="dashboard-img">
+            <p>Monitoring supply chain efficiency and student performance drivers using <b>Power BI, Tableau, and SHAP explainability</b>.</p>
+            <div class="dashboard-preview">
+                <p style="color:#999; font-weight: bold;">[ Placeholder: Upload Dashboard Screenshot ]</p>
+            </div>
         </div>
     </div>
 
-    <div class="contact-section" id="contact" style="text-align: center; margin-top: 50px; padding: 40px; background: var(--asu-maroon); border-radius: 15px; color: white;">
-        <h2 style="color:var(--asu-gold)">Career Collaboration</h2>
-        <div style="margin-top: 20px;">
-            <a href="Resume_Sai_Sravani.pdf" download style="background: var(--asu-gold); color: var(--asu-maroon); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800;">Download Resume (PDF)</a>
+    <div class="contact-section" id="contact" style="text-align: center; margin-top: 60px; padding: 50px; background: var(--asu-maroon); border-radius: 15px; color: white;">
+        <h2 style="color:var(--asu-gold); margin-top:0;">Let's Collaborate</h2>
+        <p>Driving strategic growth through data-driven decision-making.</p>
+        <div style="margin-top: 30px;">
+            <a href="Resume_Sai_Sravani.pdf" download class="btn-main">Download Resume (PDF)</a>
         </div>
     </div>
 </div>
