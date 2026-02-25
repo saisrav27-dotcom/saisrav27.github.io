@@ -3,77 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Business Analyst Portfolio</title>
+    <title>Senior Business Analyst | MSBA @ ASU</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        :root { --navy: #0a3d62; --gold: #ffb142; --slate: #2d3436; --light: #f1f2f6; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--light); color: var(--slate); }
+        :root { --navy: #0a3d62; --gold: #ffb142; --slate: #2d3436; --light: #f1f2f6; --teal: #0097a7; }
+        body { font-family: 'Inter', -apple-system, sans-serif; margin: 0; background: var(--light); color: var(--slate); scroll-behavior: smooth; }
         .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
         
-        header { height: 70vh; display: flex; flex-direction: column; justify-content: center; border-left: 5px solid var(--navy); padding-left: 30px; }
-        h1 { font-size: 3.5rem; margin: 0; color: var(--navy); }
-        .subtitle { font-size: 1.5rem; color: #636e72; margin-top: 10px; }
+        header { height: 80vh; display: flex; flex-direction: column; justify-content: center; }
+        h1 { font-size: 3.5rem; margin: 0; color: var(--navy); line-height: 1.1; }
+        .subtitle { font-size: 1.4rem; color: #636e72; margin: 15px 0; font-weight: 300; }
+        .highlight { color: var(--gold); font-weight: bold; }
 
-        .section-title { border-bottom: 2px solid var(--navy); display: inline-block; margin-bottom: 30px; padding-bottom: 5px; margin-top: 50px;}
-        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 50px; }
-        .skill-tag { background: var(--navy); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; transition: 0.3s; }
-        .skill-tag:hover { background: var(--gold); color: var(--navy); transform: scale(1.1); }
+        .section-title { border-bottom: 2px solid var(--navy); display: inline-block; margin: 60px 0 30px; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .skill-category h4 { margin-bottom: 10px; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 10px; }
+        .skill-tag { background: white; color: var(--navy); padding: 5px 12px; border-radius: 4px; font-size: 0.85rem; display: inline-block; margin: 3px; border: 1px solid #ddd; }
 
-        .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .project-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.4s; }
-        .project-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .project-card h3 { color: var(--navy); margin-top: 0; }
-        .result-badge { display: inline-block; background: #e1f5fe; color: #01579b; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-top: 10px; }
+        /* Project Cards */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .project-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; position: relative; overflow: hidden; }
+        .project-card:hover { transform: translateY(-10px); }
+        .project-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--navy); }
+        .project-card h3 { margin-top: 0; color: var(--navy); font-size: 1.25rem; }
+        .impact-badge { background: #e0f2f1; color: #00695c; padding: 5px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; display: inline-block; margin-top: 15px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header data-aos="fade-right" data-aos-duration="1200">
-        <h1>Senior Business Analyst</h1>
-        <div class="subtitle">Bridging Data Science and Strategic Decision-Making.</div>
-        <p>MS in Business Analytics @ Arizona State University | Specialized in Supply Chain & Predictive Modeling.</p>
+    <header data-aos="fade-up">
+        <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 10px;">Portfolio</p>
+        <h1>Senior Business Analyst <span style="color:var(--navy)">.</span></h1>
+        <div class="subtitle">Specializing in <span class="highlight">KPI Governance</span>, Process Optimization, and Predictive Modeling.</div>
+        <p style="max-width: 700px;">3+ years of experience in global enterprise initiatives. Currently pursuing an <b>MS in Business Analytics at Arizona State University</b>.</p>
+        <div style="margin-top: 30px;">
+            <a href="#contact" style="background: var(--navy); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold;">Let's Connect</a>
+        </div>
     </header>
 
-    <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
-    <div class="skills-container" data-aos="fade-up">
-        <span class="skill-tag">Python (Pandas, Scikit-learn)</span>
-        <span class="skill-tag">Power BI & Tableau</span>
-        <span class="skill-tag">Machine Learning (Random Forest, SHAP)</span>
-        <span class="skill-tag">Supply Chain Optimization</span>
-        <span class="skill-tag">SQL & Database Management</span>
-        <span class="skill-tag">Salesforce Analytics</span>
+    <h2 class="section-title" data-aos="fade-right">Technical Arsenal</h2>
+    <div class="skills-grid" data-aos="fade-up">
+        <div class="skill-category">
+            <h4>Analytics & Programming</h4>
+            <span class="skill-tag">SQL</span> <span class="skill-tag">PostgreSQL</span> <span class="skill-tag">Python</span> <span class="skill-tag">Pandas</span> <span class="skill-tag">Scikit-learn</span>
+        </div>
+        <div class="skill-category">
+            <h4>Visualization</h4>
+            <span class="skill-tag">Power BI</span> <span class="skill-tag">Tableau</span> <span class="skill-tag">Advanced Excel</span>
+        </div>
+        <div class="skill-category">
+            <h4>Business Strategy</h4>
+            <span class="skill-tag">KPI Development</span> <span class="skill-tag">Root Cause Analysis</span> <span class="skill-tag">Lean Six Sigma</span> <span class="skill-tag">Agile/SCRUM</span>
+        </div>
     </div>
 
-    <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+    <h2 class="section-title" data-aos="fade-right">Impact & Projects</h2>
     <div class="project-grid">
-        <div class="project-card" data-aos="zoom-in-up">
-            <h3>Student Performance Prediction</h3>
-            <p>Developed a Random Forest model in Python to predict academic outcomes with 85% accuracy using SHAP for explainability.</p>
-            <div class="result-badge">85% Accuracy Achieved</div>
+        <div class="project-card" data-aos="fade-up">
+            <h3>Automated Reporting Ecosystem</h3>
+            <p>Built automated dashboards for Capgemini leadership using SQL and Power BI to track enterprise-wide KPIs.</p>
+            <div class="impact-badge">40% Reduction in Manual Effort</div>
         </div>
-        
-        <div class="project-card" data-aos="zoom-in-up" data-aos-delay="200">
-            <h3>Healthcare Inventory Capstone</h3>
-            <p>Collaborated with Honor Health to optimize inventory levels and build KPI dashboards using Power BI and Excel.</p>
-            <div class="result-badge">Supply Chain Optimization</div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Healthcare Inventory Optimization</h3>
+            <p>Collaborated with Honor Health to analyze replenishment strategies and build KPI dashboards to reduce stockouts.</p>
+            <div class="impact-badge">Supply Chain Optimization</div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Student Performance Prediction</h3>
+            <p>Developed predictive models (Neural Networks & Random Forest) to identify drivers of academic success.</p>
+            <div class="impact-badge">Predictive Analytics</div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Statistical Risk Modeling</h3>
+            <p>Built complex simulations using Precision Tree to quantify risk factors for high-stakes business case studies.</p>
+            <div class="impact-badge">Risk Quantification</div>
         </div>
     </div>
 
-    <h2 class="section-title" data-aos="fade-up">Let's Connect</h2>
-    <div class="project-card" data-aos="flip-up" style="text-align: center; border-bottom: 4px solid var(--gold);">
-        <p>Currently seeking opportunities in <b>Data Analytics</b> and <b>Strategy</b>.</p>
-        <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" style="text-decoration: none; background: var(--navy); color: white; padding: 12px 25px; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 10px;">View LinkedIn Profile</a>
-        <p style="margin-top: 20px; font-size: 0.9rem;">📍 Phoenix, AZ | MS Business Analytics @ ASU</p>
+    <div id="contact" style="margin-top: 100px; padding: 60px; background: var(--navy); color: white; border-radius: 15px; text-align: center;" data-aos="zoom-in">
+        <h2 style="margin-top:0">Drive Decision-Making with Data</h2>
+        <p>I am currently looking for roles in Data Analytics and Strategy where I can apply my experience in global operations.</p>
+        <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" style="background: var(--gold); color: var(--navy); padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px;">Contact via LinkedIn</a>
     </div>
+    
+    <p style="text-align: center; margin-top: 40px; color: #999; font-size: 0.8rem;">&copy; 2026 | Built with GitHub Pages</p>
 </div>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    AOS.init({
-        duration: 800,
-        once: true,
-    });
+    AOS.init({ duration: 1000, once: true });
 </script>
 </body>
 </html>
