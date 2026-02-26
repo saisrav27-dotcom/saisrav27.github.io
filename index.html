@@ -6,7 +6,6 @@
     <title>Sai Sravani | Business Analyst Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        /* Updated Color Palette: Navy, White, and Slate */
         :root { 
             --navy: #002D62; 
             --accent-blue: #0056b3;
@@ -18,7 +17,6 @@
         body { 
             font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; margin: 0;
             background-color: #f0f4f8;
-            /* Faded Chart Background in Navy tint */
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 80 L30 50 L50 70 L80 20' stroke='%23002D62' stroke-width='1' fill='none' opacity='0.04'/%3E%3Crect x='10' y='40' width='5' height='40' fill='%23002D62' opacity='0.02'/%3E%3Crect x='20' y='55' width='5' height='25' fill='%23002D62' opacity='0.02'/%3E%3Crect x='30' y='30' width='5' height='50' fill='%23002D62' opacity='0.02'/%3E%3C/svg%3E");
             background-attachment: fixed;
         }
@@ -28,7 +26,6 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
         
-        /* Hero Section in Dark Blue */
         .hero { 
             display: flex; align-items: center; justify-content: space-between; 
             background: linear-gradient(rgba(0, 45, 98, 0.92), rgba(0, 45, 98, 0.92)), 
@@ -38,7 +35,11 @@
         }
         .hero-text { flex: 1; padding-right: 30px; }
         .hero-image-space { flex: 0 0 200px; height: 200px; border: 4px solid var(--pure-white); border-radius: 50%; overflow: hidden; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; }
-        .profile-pic { width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none; }
+        
+        .profile-pic { 
+            width: 100%; height: 100%; object-fit: cover;
+            pointer-events: none; user-select: none; -webkit-user-drag: none;
+        }
 
         .name-header { font-size: 3.5rem; font-weight: 900; margin: 0; letter-spacing: -2px; line-height: 1; color: var(--pure-white); }
         .title-sub { font-size: 1.4rem; color: #a5c9ff; margin: 10px 0; font-weight: 700; border-bottom: 2px solid #a5c9ff; display: inline-block; padding-bottom: 5px; }
@@ -51,7 +52,7 @@
 
         .skills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .skill-bucket { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid var(--navy); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
-        .skill-bucket:hover { transform: translateY(-5px); border-top-color: var(--accent-blue); }
+        .skill-bucket:hover { transform: translateY(-5px); }
         .skill-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; }
 
         .project-block { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #e1e8ed; }
@@ -61,10 +62,24 @@
         .pub-card { border-left: 4px solid var(--accent-blue); background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .pub-link { display: inline-block; margin-top: 10px; color: var(--accent-blue); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--accent-blue); }
         
-        .btn-main { background: var(--navy); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; transition: 0.3s; }
-        .btn-main:hover { background: var(--accent-blue); }
-        .btn-secondary { background: white; color: var(--navy); border: 2px solid var(--navy); padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-block; margin: 10px; transition: 0.3s; }
-        .btn-secondary:hover { background: #f0f4f8; }
+        /* Unified White Buttons for Contact Section */
+        .btn-unified { 
+            background: var(--pure-white); 
+            color: var(--navy) !important; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            display: inline-block; 
+            margin: 10px; 
+            transition: 0.3s ease;
+            border: 2px solid var(--pure-white);
+        }
+        .btn-unified:hover { 
+            background: transparent; 
+            color: var(--pure-white) !important; 
+            transform: translateY(-3px);
+        }
 
         @media (max-width: 768px) { 
             .hero { flex-direction: column; text-align: center; } 
@@ -147,15 +162,13 @@
                 <li>Executed analytics-driven operational processes supporting global enterprise initiatives.</li>
                 <li>Built automated dashboards reducing manual reporting effort by 40%.</li>
                 <li>Led KPI governance to track operational outcomes for leadership decision-making.</li>
-                <li>Mentored junior analysts on analytics best practices and visualization standards.</li>
             </ul>
         </div>
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Capgemini | Analyst (Apr 2022 - Dec 2023)</span>
             <ul>
-                <li>Translated ambiguous business questions into structured analytical frameworks for customer insights.</li>
+                <li>Translated ambiguous business questions into structured analytical frameworks.</li>
                 <li>Optimized SQL queries to analyze large datasets and inform performance trends.</li>
-                <li>Collaborated in Agile teams using JIRA and Confluence.</li>
             </ul>
         </div>
     </section>
@@ -177,7 +190,6 @@
             <h3>Student Performance Prediction</h3>
             <ul style="font-size: 0.9rem;">
                 <li>Developed predictive models in Python using Neural Networks and Random Forest.</li>
-                <li>Analyzed historical performance data to identify key outcome drivers.</li>
             </ul>
             <span class="tech-stack">Skills: Python, Neural Networks, Random Forest</span>
         </div>
@@ -194,7 +206,7 @@
         <div class="pub-card" data-aos="fade-right" data-aos-delay="100">
             <span class="project-meta">Publication | IJRBAT</span>
             <h3 style="margin: 5px 0;">Text Based Fruit Classifier</h3>
-            <p>Machine learning model using KNN and SVM to classify fruit datasets based on physical attributes.</p>
+            <p>Machine learning model using KNN and SVM to classify fruit datasets.</p>
             <a href="https://ijrbat.in/upload_papers/0207202107240015.%20T%20Sai%20Sravani,%20K%20Divya%20Teja%20and%20Sunil%20Bhutada.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
         </div>
         <div class="pub-card" data-aos="fade-up">
@@ -205,11 +217,11 @@
         </div>
     </section>
 
-    <div class="contact-section" id="contact" style="text-align: center; margin-top: 50px; padding: 40px; background: var(--navy); border-radius: 20px; color: white;">
-        <h2 style="color:white">Career Collaboration</h2>
+    <div class="contact-section" id="contact" style="text-align: center; margin-top: 50px; padding: 60px 40px; background: var(--navy); border-radius: 20px; color: white;">
+        <h2 style="color:var(--pure-white); margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px;">Career Collaboration</h2>
         <div style="margin-top: 20px;">
-            <a href="Resume_SaiSravani.pdf" download class="btn-main" style="background: white; color: var(--navy);">Download Resume (PDF)</a>
-            <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-secondary" style="border-color: white; color: white;">LinkedIn Profile</a>
+            <a href="Resume_SaiSravani.pdf" download class="btn-unified">Download Resume (PDF)</a>
+            <a href="https://www.linkedin.com/in/sai-sravani" target="_blank" class="btn-unified">LinkedIn Profile</a>
         </div>
     </div>
 </div>
