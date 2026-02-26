@@ -26,7 +26,6 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
         
-        /* Fixed Hero Header with Image Space */
         .hero { 
             display: flex; align-items: center; justify-content: space-between; 
             background: linear-gradient(rgba(11, 37, 69, 0.92), rgba(11, 37, 69, 0.92)), 
@@ -36,8 +35,6 @@
         }
         .hero-text { flex: 1; padding-right: 30px; }
         .hero-image-space { flex: 0 0 200px; height: 200px; border: 4px solid var(--pure-white); border-radius: 50%; overflow: hidden; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; }
-        
-        /* Direct Download link protection for Google Drive */
         .profile-pic { width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none; -webkit-user-drag: none; }
 
         .name-header { font-size: 3.5rem; font-weight: 900; margin: 0; letter-spacing: -2px; line-height: 1; color: var(--pure-white); }
@@ -49,7 +46,6 @@
         .course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 40px; }
         .course-card { background: white; padding: 20px; border-radius: 8px; border-bottom: 4px solid var(--navy); text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--navy); box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; min-height: 60px; }
 
-        /* UNIFORM 2x2 SKILLS GRID */
         .skills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .skill-bucket { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid var(--navy); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
         .skill-bucket:hover { transform: translateY(-5px); }
@@ -61,7 +57,6 @@
         .pub-card { border-left: 4px solid var(--accent-blue); background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .pub-link { display: inline-block; margin-top: 10px; color: var(--accent-blue); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--accent-blue); }
         
-        /* UNIFIED WHITE PILL BUTTONS */
         .btn-pill { 
             background: var(--pure-white); 
             color: var(--navy); 
@@ -78,7 +73,11 @@
         }
         .btn-pill:hover { background: transparent; color: var(--pure-white); transform: translateY(-3px); }
 
-        @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .hero-text { padding-right: 0; margin-bottom: 20px; } .course-grid, .skills-container { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { 
+            .hero { flex-direction: column; text-align: center; } 
+            .hero-text { padding-right: 0; margin-bottom: 20px; } 
+            .course-grid, .skills-container { grid-template-columns: 1fr; } 
+        }
     </style>
 </head>
 <body>
@@ -106,7 +105,7 @@
 
     <section id="about" class="about-section" data-aos="fade-up">
         <h2 style="margin-top: 0; color: var(--navy); font-size: 1.2rem; text-transform: uppercase;">Professional Profile</h2>
-        <p>I am a results-driven <b>Business Analyst</b> with over 2.8+ years of experience in driving operational excellence through data-driven strategies. My background at <b>Capgemini</b> involved architecting KPI ecosystems and automating complex reporting workflows, successfully reducing manual effort by <b>40%</b>.</p>
+        <p>I am a results-driven <b>Business Analyst</b> with over 2.8+ years of experience in driving operational excellence through data-driven strategies. My background at <b>Capgemini</b> involved architecting KPI ecosystems and automating workflows, successfully reducing manual effort by <b>40%</b>.</p>
     </section>
 
     <section id="coursework">
@@ -148,9 +147,31 @@
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Capgemini | Senior Analyst (Jan 2024 - Dec 2024)</span>
             <ul>
+                <li>Executed analytics-driven operational processes supporting global enterprise initiatives.</li>
                 <li>Built automated dashboards reducing manual reporting effort by 40%.</li>
-                <li>Led KPI governance to track operational outcomes for leadership.</li>
+                <li>Led KPI governance to track operational outcomes for leadership decision-making.</li>
             </ul>
+        </div>
+        <div class="project-block" data-aos="fade-up">
+            <span class="project-meta">Capgemini | Analyst (Apr 2022 - Dec 2023)</span>
+            <ul>
+                <li>Translated business questions into analytical frameworks.</li>
+                <li>Optimized SQL queries to analyze large datasets and inform performance trends.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-header">Academic Impact</h2>
+        <div class="project-block" data-aos="fade-up">
+            <span class="project-meta">Honor Health | Capstone (Sep - Dec 2025)</span>
+            <h3>Healthcare Inventory Management</h3>
+            <p>Led data-driven analysis of inventory optimization across warehouses.</p>
+        </div>
+        <div class="project-block" data-aos="fade-up">
+            <span class="project-meta">ASU Academic Project (Mar - Apr 2025)</span>
+            <h3>Student Performance Prediction</h3>
+            <p>Developed predictive models in Python using Neural Networks and Random Forest.</p>
         </div>
     </section>
 
@@ -165,8 +186,15 @@
         <div class="pub-card" data-aos="fade-right" data-aos-delay="100">
             <span class="project-meta">Publication | IJRBAT</span>
             <h3 style="margin: 5px 0;">Text Based Fruit Classifier</h3>
-            <p>Machine learning model using KNN and SVM to classify fruit datasets.</p>
+            <p>Machine learning model using KNN and SVM to classify fruit datasets based on physical attributes.</p>
             <a href="https://ijrbat.in/upload_papers/0207202107240015.%20T%20Sai%20Sravani,%20K%20Divya%20Teja%20and%20Sunil%20Bhutada.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
+        </div>
+        
+        <div class="pub-card" data-aos="fade-up" data-aos-delay="200" style="border-left-color: var(--accent-blue);">
+            <span class="project-meta">Special Mention | Journal Reviewer</span>
+            <h3 style="margin: 5px 0;">Journal of Scientific Research and Reports</h3>
+            <p>Associated with Sreenidhi Institute of Science and Technology. Reviewing manuscripts in research areas of data science to enhance journal quality.</p>
+            <p style="font-size: 0.85rem; color: var(--navy); font-weight: bold;">Certificate No: PRJSRR129549T</p>
         </div>
     </section>
 
