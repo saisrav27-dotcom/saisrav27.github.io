@@ -20,7 +20,7 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
         
-        /* Hero Section with Protected Image View */
+        /* Hero Section with Space for Image */
         .hero { 
             display: flex; align-items: center; justify-content: space-between; 
             background: linear-gradient(rgba(140, 29, 64, 0.9), rgba(140, 29, 64, 0.9)), 
@@ -33,7 +33,7 @@
         
         .profile-pic { 
             width: 100%; height: 100%; object-fit: cover;
-            pointer-events: none; user-select: none; -webkit-user-drag: none; /* Protection layers */
+            pointer-events: none; user-select: none; -webkit-user-drag: none;
         }
 
         .name-header { font-size: 3.5rem; font-weight: 900; margin: 0; letter-spacing: -2px; line-height: 1; color: var(--asu-gold); }
@@ -42,11 +42,11 @@
         .about-section { background: var(--glass); padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid var(--asu-maroon); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .section-header { color:var(--asu-maroon); text-transform: uppercase; letter-spacing: 2px; margin-top: 50px; border-left: 5px solid var(--asu-gold); padding-left: 15px; margin-bottom: 25px; }
         
-        /* Uniform Coursework Grid */
+        /* Strict 3-Column Grid for Coursework */
         .course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 40px; }
         .course-card { background: white; padding: 20px; border-radius: 8px; border-bottom: 4px solid var(--asu-maroon); text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--asu-maroon); box-shadow: 0 4px 6px rgba(0,0,0,0.05); min-height: 60px; display: flex; align-items: center; justify-content: center; }
 
-        /* Uniform 2x2 Skills Grid */
+        /* Strict 2-Column Grid for Skills */
         .skills-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .skill-bucket { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid var(--asu-maroon); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
         .skill-bucket:hover { transform: translateY(-5px); }
@@ -94,7 +94,8 @@
 
     <section id="about" class="about-section" data-aos="fade-up">
         <h2 style="margin-top: 0; color: var(--asu-maroon); font-size: 1.2rem; text-transform: uppercase;">Professional Profile</h2>
-        <p>I am a results-driven <b>Business Analyst</b> with over 2.8+ years of experience in driving operational excellence. My background at <b>Capgemini</b> involved architecting KPI ecosystems and automating complex reporting workflows, successfully reducing manual effort by <b>40%</b>. Currently pursuing an <b>MS in Business Analytics</b> at ASU.</p>
+        <p>I am a results-driven <b>Business Analyst</b> with over 2.8+ years of experience in driving operational excellence through data-driven strategies. My background at <b>Capgemini</b> involved architecting KPI ecosystems and automating complex reporting workflows, successfully reducing manual effort by <b>40%</b>.</p>
+        <p>I am furthering my expertise in predictive modeling, AI programming, and advanced marketing analytics at ASU. I am passionate about transforming unstructured data into actionable insights and bridging the gap between technical complexity and business growth.</p>
     </section>
 
     <section id="coursework">
@@ -126,7 +127,10 @@
             </div>
             <div class="skill-bucket">
                 <h4 style="margin:0 0 10px 0;">💡 Business Strategy</h4>
-                <ul class="skill-list"><li>KPI Development, Root Cause Analysis, Trend Analysis</li></ul>
+                <ul class="skill-list">
+                    <li>KPI Development, Root Cause Analysis, Trend Analysis</li>
+                    <li>Lean Six Sigma, Test & Learn Experimentation</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -139,6 +143,7 @@
                 <li>Executed analytics-driven operational processes supporting global enterprise initiatives.</li>
                 <li>Built automated dashboards reducing manual reporting effort by 40%.</li>
                 <li>Led KPI governance to track operational outcomes for leadership decision-making.</li>
+                <li>Mentored junior analysts on analytics best practices and visualization standards.</li>
             </ul>
         </div>
         <div class="project-block" data-aos="fade-up">
@@ -146,6 +151,7 @@
             <ul>
                 <li>Translated ambiguous business questions into structured analytical frameworks.</li>
                 <li>Optimized SQL queries to analyze large datasets and inform performance trends.</li>
+                <li>Collaborated in Agile teams using JIRA and Confluence.</li>
             </ul>
         </div>
     </section>
@@ -155,13 +161,20 @@
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">Honor Health | Capstone (Sep - Dec 2025)</span>
             <h3>Healthcare Inventory Management</h3>
-            <p>Led data-driven analysis of inventory optimization across multiple warehouses.</p>
+            <ul style="font-size: 0.9rem;">
+                <li>Led data-driven analysis of inventory optimization across multiple warehouses.</li>
+                <li>Designed test-and-learn experiments for replenishment strategies.</li>
+                <li>Built interactive dashboards in Power BI and Excel to monitor KPIs.</li>
+            </ul>
             <span class="tech-stack">Skills: Power BI, KPI Development, Inventory Strategy</span>
         </div>
         <div class="project-block" data-aos="fade-up">
             <span class="project-meta">ASU Academic Project (Mar - Apr 2025)</span>
             <h3>Student Performance Prediction</h3>
-            <p>Developed predictive models in Python using Neural Networks and Random Forest.</p>
+            <ul style="font-size: 0.9rem;">
+                <li>Developed predictive models in Python using Neural Networks and Random Forest.</li>
+                <li>Analyzed historical performance data to identify key outcome drivers.</li>
+            </ul>
             <span class="tech-stack">Skills: Python, Neural Networks, Random Forest</span>
         </div>
     </section>
@@ -171,10 +184,16 @@
         <div class="pub-card" data-aos="fade-right">
             <span class="project-meta">Publication | IJRBAT</span>
             <h3 style="margin: 5px 0;">Aspect Extraction & Lexicon Computation</h3>
-            <p>NLP-based Opinion Mining of Nykaa product reviews.</p>
+            <p>NLP-based Opinion Mining of Nykaa product reviews using NLTK.</p>
             <a href="https://ijrbat.in/upload_papers/3006202110581611.%20T%20Sai%20Sravani,%20K%20Maneesha%20Reddy,%20S%20Nirupama.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
         </div>
         <div class="pub-card" data-aos="fade-right" data-aos-delay="100">
+            <span class="project-meta">Publication | IJRBAT</span>
+            <h3 style="margin: 5px 0;">Text Based Fruit Classifier</h3>
+            <p>Machine learning model using KNN and SVM to classify fruit datasets based on physical attributes.</p>
+            <a href="https://ijrbat.in/upload_papers/0207202107240015.%20T%20Sai%20Sravani,%20K%20Divya%20Teja%20and%20Sunil%20Bhutada.pdf" target="_blank" class="pub-link">Read Paper &rarr;</a>
+        </div>
+        <div class="pub-card" data-aos="fade-up">
             <span class="project-meta">Special Mention | Journal Reviewer</span>
             <h3 style="margin: 5px 0;">Journal of Scientific Research and Reports</h3>
             <p>Reviewing manuscripts in research areas of data science to enhance journal quality.</p>
